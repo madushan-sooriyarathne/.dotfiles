@@ -15,10 +15,10 @@ end
 config.color_scheme = "Afterglow"
 config.window_frame = {
 	font = wezterm.font({ family = "Hack", weight = "Bold" }),
-	font_size = 12.0,
+	font_size = 14.0,
 }
 config.font = wezterm.font_with_fallback({ "Hack", "JetBrains Mono" })
-config.font_size = 11.5
+config.font_size = 15.0
 
 -- return config to wezterm
 return config
