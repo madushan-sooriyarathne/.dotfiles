@@ -12,7 +12,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 # Case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Hyphen-insensitive completion.
 # HYPHEN_INSENSITIVE="true"
@@ -62,7 +62,10 @@ fi
 # Aliases
 alias zshconfig="nvim ~/.zshrc"
 # alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias editnvim="nvim ~/.config/nvim"
+alias nvimconfig="cd ~/.config/nvim && nvim"
+alias fcd='cd $(fzf)'
+alias fnvim='nvim $(fzf)'
+
 
 # bun completions
 [ -s "/Users/mothership/.bun/_bun" ] && source "/Users/mothership/.bun/_bun"
@@ -76,3 +79,5 @@ alias bunx="bun x"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+eval $(thefuck --alias)
