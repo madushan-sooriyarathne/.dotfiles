@@ -17,7 +17,7 @@ config.window_frame = {
 	font = wezterm.font({ family = "Hack", weight = "Bold" }),
 	font_size = 14.0,
 }
-config.font = wezterm.font_with_fallback({ "Hack", "JetBrains Mono" })
+config.font = wezterm.font_with_fallback({ "Hack Nerd Font Mono", "JetBrains Mono" })
 config.font_size = 15.0
 
 -- return config to wezterm
