@@ -1,0 +1,154 @@
+#!/bin/bash
+
+# config-dev - Development environment configuration script
+# This script sets up dotfiles, symlinks, and installs development tools
+
+set -e  # Exit on any error
+
+echo "🚀 Starting development environment configuration..."
+
+# 1. Make all files in ~/.dotfiles/bin/ executable
+echo "📁 Making all files in ~/.dotfiles/bin/ executable..."
+if [ -d "$HOME/.dotfiles/bin" ]; then
+    chmod +x "$HOME/.dotfiles/bin/"*
+    echo "✅ Made all files in ~/.dotfiles/bin/ executable"
+else
+    echo "⚠️  ~/.dotfiles/bin/ directory not found, skipping..."
+fi
+
+# 2. Create symlinks
+echo "🔗 Creating symlinks..."
+
+# Function to create symlink safely
+create_symlink() {
+    local source="$1"
+    local target="$2"
+    
+    if [ -e "$source" ]; then
+        # Remove existing file/link if it exists
+        if [ -e "$target" ] || [ -L "$target" ]; then
+            echo "  Removing existing $target"
+            rm -rf "$target"
+        fi
+        
+        # Create the symlink
+        ln -sf "$source" "$target"
+        echo "  ✅ Created symlink: $target -> $source"
+    else
+        echo "  ⚠️  Source file/directory $source not found, skipping..."
+    fi
+}
+
+# Create all the required symlinks
+create_symlink "$HOME/.dotfiles/.zshrc" "$HOME/.zshrc"
+create_symlink "$HOME/.dotfiles/claude-config" "$HOME/.claude"
+create_symlink "$HOME/.dotfiles/warp-config" "$HOME/.warp"
+create_symlink "$HOME/.dotfiles/wezterm/wezterm.lua" "$HOME/.wezterm.lua"
+create_symlink "$HOME/.dotfiles/.tmux.conf" "$HOME/.tmux.conf"
+
+# 3. Install applications with brew
+echo "🍺 Installing applications with Homebrew..."
+
+# Check if brew is installed
+if ! command -v brew &> /dev/null; then
+    echo "❌ Homebrew not found. Please install Homebrew first:"
+    echo "   /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+    exit 1
+fi
+
+# Install/upgrade Neovim first
+echo "  Checking Neovim installation..."
+if brew list "neovim" &>/dev/null; then
+    echo "  📦 Neovim is installed, checking for updates..."
+    brew upgrade neovim
+    echo "  ✅ Neovim updated to latest version"
+else
+    echo "  📦 Installing Neovim..."
+    brew install neovim
+    echo "  ✅ Installed Neovim"
+fi
+
+# Install the required packages
+packages=("stylua" "shfmt" "prettier")
+
+for package in "${packages[@]}"; do
+    echo "  Installing $package..."
+    if brew list "$package" &>/dev/null; then
+        echo "  ✅ $package is already installed"
+    else
+        brew install "$package"
+        echo "  ✅ Installed $package"
+    fi
+done
+
+# 4. Setup Neovim configuration
+echo "⚙️  Setting up Neovim configuration..."
+
+nvim_config_dir="$HOME/.config/nvim"
+nvim_repo_url="git@github.com:madushan-sooriyarathne/nvim-config.git"
+
+# Create .config directory if it doesn't exist
+mkdir -p "$HOME/.config"
+
+if [ -d "$nvim_config_dir" ]; then
+    echo "  📁 Neovim config directory exists, checking git status..."
+    
+    # Check if it's a git repository
+    if [ -d "$nvim_config_dir/.git" ]; then
+        cd "$nvim_config_dir"
+        
+        # Check if the remote origin matches our expected repo
+        current_origin=$(git remote get-url origin 2>/dev/null || echo "")
+        
+        if [ "$current_origin" = "$nvim_repo_url" ]; then
+            echo "  🔍 Correct git remote found, checking for updates..."
+            
+            # Fetch latest changes
+            git fetch origin
+            
+            # Check if local main is behind remote main
+            local_commit=$(git rev-parse HEAD)
+            remote_commit=$(git rev-parse origin/main 2>/dev/null || git rev-parse origin/master 2>/dev/null)
+            
+            if [ "$local_commit" != "$remote_commit" ]; then
+                echo "  📥 Local config is behind remote, pulling latest changes..."
+                git pull origin main 2>/dev/null || git pull origin master 2>/dev/null
+                echo "  ✅ Neovim config updated to latest version"
+            else
+                echo "  ✅ Neovim config is up to date"
+            fi
+        else
+            echo "  ⚠️  Different git remote found ($current_origin)"
+            echo "  🔄 Backing up existing config and cloning fresh..."
+            cd "$HOME/.config"
+            mv nvim "nvim.backup.$(date +%Y%m%d_%H%M%S)"
+            git clone "$nvim_repo_url" nvim
+            echo "  ✅ Cloned fresh Neovim config (old config backed up)"
+        fi
+        
+        cd "$HOME"  # Return to home directory
+    else
+        echo "  ⚠️  Directory exists but is not a git repository"
+        echo "  🔄 Backing up existing config and cloning fresh..."
+        mv "$nvim_config_dir" "$nvim_config_dir.backup.$(date +%Y%m%d_%H%M%S)"
+        git clone "$nvim_repo_url" "$nvim_config_dir"
+        echo "  ✅ Cloned fresh Neovim config (old config backed up)"
+    fi
+else
+    echo "  📥 Cloning Neovim configuration..."
+    git clone "$nvim_repo_url" "$nvim_config_dir"
+    echo "  ✅ Cloned Neovim config successfully"
+fi
+
+echo ""
+echo "🎉 Development environment configuration completed successfully!"
+echo ""
+echo "📝 Summary of changes:"
+echo "   • Made all files in ~/.dotfiles/bin/ executable"
+echo "   • Created symlinks for dotfiles configuration"
+echo "   • Installed/updated Neovim to latest version"
+echo "   • Installed development tools: stylua, shfmt, prettier"
+echo "   • Set up/updated Neovim configuration from git repository"
+echo ""
+echo "💡 You may need to restart your terminal or run 'source ~/.zshrc' for changes to take effect."
+echo "💡 Run 'nvim' to start Neovim with your configuration."

@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# Simple script to copy the content of a Claude workflow file to the clipboard
+# Usage: getworkflow <workflow_name>
+
+WORKFLOW_NAME="$1"
+COMMANDS_DIR="$HOME/.claude/commands"
+
+# Function to extract description from markdown file
+extract_description() {
+    local file_path="$1"
+    # Look for the first non-empty line after the title (line starting with #)
+    awk 'NR > 1 && NF > 0 && !/^#/{print; exit}' "$file_path" | sed 's/^[[:space:]]*//' | cut -c1-60
+}
+
+# Function to display available workflows with descriptions
+show_available_workflows() {
+    echo "📋 Available workflows:"
+    echo "======================"
+    
+    # Check if commands directory exists
+    if [[ ! -d "$COMMANDS_DIR" ]]; then
+        echo "❌ Error: Commands directory not found at $COMMANDS_DIR"
+        exit 1
+    fi
+    
+    # Get all markdown files
+    local files=("$COMMANDS_DIR"/*.md)
+    
+    # Check if there are any files
+    if [[ ! -e "${files[0]}" ]]; then
+        echo "📭 No workflow files found in $COMMANDS_DIR"
+        exit 1
+    fi
+    
+    # Display each workflow with its description
+    for file in "${files[@]}"; do
+        if [[ -f "$file" ]]; then
+            local filename=$(basename "$file" .md)
+            local description=$(extract_description "$file")
+            # If description is empty, provide a default message
+            if [[ -z "$description" ]]; then
+                description="No description available"
+            fi
+            printf "  %-20s %s\n" "$filename" "$description"
+        fi
+    done
+    echo ""
+}
+
+# If no workflow name provided, show available workflows
+if [[ -z "$WORKFLOW_NAME" ]]; then
+    show_available_workflows
+    echo "💡 Usage: getworkflow <workflow_name>"
+    exit 0
+fi
+
+FILE_PATH="$COMMANDS_DIR/$WORKFLOW_NAME.md"
+
+# Check if file exists
+if [[ ! -f "$FILE_PATH" ]]; then
+    echo "❌ Error: Workflow '$WORKFLOW_NAME' not found!"
+    echo ""
+    show_available_workflows
+    exit 1
+fi
+
+# Copy content to clipboard (works on macOS)
+if cat "$FILE_PATH" | pbcopy; then
+    echo "✅ Success: Content of workflow '$WORKFLOW_NAME' copied to clipboard!"
+else
+    echo "❌ Error: Failed to copy content to clipboard"
+    exit 1
+fi

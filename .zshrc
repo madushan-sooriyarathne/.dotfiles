@@ -83,4 +83,4 @@ export NVM_DIR="$HOME/.nvm"
 eval $(thefuck --alias)
 . "/Users/madushan/.deno/env"
 
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.dotfiles/bin:$PATH"

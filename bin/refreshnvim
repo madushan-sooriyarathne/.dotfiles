@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# refreshnvim - Clear Neovim cache and restore plugins/LSP servers
+# Usage: refreshnvim
+
+set -e
+
+echo "🔄 Refreshing Neovim setup..."
+
+# Clear Neovim cache directories
+echo "🧹 Clearing Neovim cache..."
+
+# Remove lazy.nvim plugin cache
+if [ -d ~/.local/share/nvim ]; then
+    echo "  - Removing ~/.local/share/nvim"
+    rm -rf ~/.local/share/nvim
+fi
+
+# Remove Neovim state directory
+if [ -d ~/.local/state/nvim ]; then
+    echo "  - Removing ~/.local/state/nvim"
+    rm -rf ~/.local/state/nvim
+fi
+
+# Remove Neovim cache directory
+if [ -d ~/.cache/nvim ]; then
+    echo "  - Removing ~/.cache/nvim"
+    rm -rf ~/.cache/nvim
+fi
+
+echo "✅ Cache cleared successfully!"
+
+# Run Neovim in headless mode to restore plugins to locked versions
+echo "📦 Restoring plugins to locked versions with lazy.nvim..."
+nvim --headless "+Lazy! restore" +qa
+
+# Wait a moment for plugins to settle
+sleep 2
+
+# Run Mason to install all LSP servers, formatters, and linters
+echo "🔧 Installing LSP servers and tools with Mason..."
+nvim --headless -c "MasonInstallAll" -c "qa"
+
+echo "🎉 Neovim refresh completed successfully!"
+echo "All plugins have been restored to their locked versions and LSP servers have been installed."
