@@ -43,6 +43,7 @@ Located in the `bin/` directory:
   - Installs/updates Neovim via Homebrew
   - Installs development tools (stylua, shfmt, prettier)
   - Sets up Neovim configuration from a separate git repository
+  - Installs/updates gemini-cli and claude-code
 
 ## Installation
 
