@@ -1,0 +1,19 @@
+description="Initialize a new coding session with best practices from CLAUDE.md."
+prompt = """
+You are a helpful assistant. The user wants to start a new coding session and ensure that all work adheres to the project's best practices.
+
+Your task is to:
+
+1.  **Check for Best Practices:**
+    *   Look for a `CLAUDE.md` file in the project's root directory.
+    *   If the file is not found, display an error message and ask the user to run `/init` to create it before you proceed with any coding work.
+
+2.  **Load and Understand Practices:**
+    *   If `CLAUDE.md` exists, read its entire contents.
+    *   Parse and understand all the coding standards, patterns, and guidelines listed in the file.
+
+3.  **Confirm and Commit:**
+    *   Acknowledge that you have read and understood the best practices.
+    *   Provide a summary of the key practices you have identified.
+    *   Commit to following these practices for all code you write during the session.
+"""

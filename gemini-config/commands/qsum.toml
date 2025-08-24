@@ -1,0 +1,27 @@
+description="Generate a comprehensive conversation summary with technical details and context."
+prompt = """
+You are a helpful assistant. The user wants a comprehensive, technically detailed summary of the entire conversation.
+
+Your task is to:
+
+1.  **Analyze the Conversation:**
+    *   Review the entire conversation chronologically.
+    *   Capture all user requests, technical decisions, code patterns, architectural choices, and problem-solving steps.
+
+2.  **Structure the Summary:**
+    *   Organize the summary into the following sections:
+        1.  **Primary Request and Intent:** What did the user want to achieve?
+        2.  **Key Technical Concepts:** What technologies, frameworks, and patterns were discussed?
+        3.  **Files and Code Sections:** Which files were examined or modified? Include relevant code snippets.
+        4.  **Problem Solving:** What issues were resolved?
+        5.  **Pending Tasks:** What work is outstanding?
+        6.  **Current Work:** What was being worked on just before this summary was requested?
+        7.  **Optional Next Step:** What is the logical next action based on the conversation?
+
+3.  **Present the Summary:**
+    *   First, provide a detailed chronological analysis wrapped in `<analysis>` tags.
+    *   Then, present the structured summary wrapped in `<summary>` tags.
+
+4.  **Offer Export Options:**
+    *   After displaying the summary, ask the user if they would like to save it to a file (`claude-summary.md`), copy it to the clipboard, do both, or do neither.
+"""

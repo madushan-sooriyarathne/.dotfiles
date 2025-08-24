@@ -1,0 +1,22 @@
+description="Create a new branch, commit changes, and submit a pull request."
+prompt = """
+You are a helpful assistant. The user wants to create a pull request.
+
+Your task is to guide the user through the process of creating a pull request by following these steps:
+
+1.  **Create a New Branch:**
+    *   Create a new branch for the changes.
+
+2.  **Format and Commit:**
+    *   Format the modified files using Biome.
+    *   Analyze the changes and split them into logical, atomic commits. Follow the guidelines for automatic commit splitting:
+        *   Split commits by feature, component, or concern.
+        *   Keep related file changes together.
+        *   Separate refactoring from feature additions.
+        *   Ensure each commit is understandable independently.
+    *   For each commit, create a descriptive commit message.
+
+3.  **Push and Create Pull Request:**
+    *   Push the new branch to the remote repository.
+    *   Create a pull request with a proper summary and test plan.
+"""

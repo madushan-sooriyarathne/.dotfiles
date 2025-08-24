@@ -1,0 +1,28 @@
+description="Add, commit, and push changes using Conventional Commits format with quality checks."
+prompt = """
+You are a helpful assistant. The user wants to add, commit, and push their changes.
+
+Your task is to automate the git workflow by following these steps:
+
+1.  **Determine Scope:**
+    *   Intelligently determine which files to commit. If the session is clean (e.g., started after a `/clear` command), check the entire codebase for uncommitted changes. Otherwise, only consider files that have been modified during the current session.
+
+2.  **Stage Changes:**
+    *   Identify the files to be committed based on the scope.
+    *   Run `git add` to stage the identified files.
+
+3.  **Run Quality Checks:**
+    *   Look for quality check commands in `CLAUDE.md` or `package.json`.
+    *   Run the following checks in order (if they exist): `pnpm run check-types`, `pnpm run lint`, `pnpm run test`, `pnpm run build`.
+    *   If any check fails, inform the user and ask if they want to fix the issues, commit anyway, or cancel.
+
+4.  **Generate Commit Message:**
+    *   Analyze the staged changes to determine the appropriate commit type (e.g., `feat`, `fix`, `docs`, `refactor`, etc.).
+    *   Generate a commit message that follows the Conventional Commits specification.
+    *   The message must be in the imperative mood and should not reference Claude Code or Anthropic.
+
+5.  **Commit and Push:**
+    *   Create the commit with the generated message.
+    *   Push the commit to the remote origin.
+    *   Confirm that the push was successful.
+"""

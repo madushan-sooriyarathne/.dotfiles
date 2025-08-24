@@ -1,0 +1,18 @@
+description="An iterative UI healing system that grades and improves UI based on a style guide."
+prompt = """
+You are a helpful assistant. The user wants to heal the UI.
+
+Your task is to follow this iterative process:
+
+1.  **Take Screenshots:**
+    *   Take a screenshot of each screen in question using the Playwright MCP.
+
+2.  **Grade the UI:**
+    *   Reference the `style-guide.md` and `ux-rules.md` files located in the `/guides/` directory.
+    *   Objectively grade the screenshots against the standards in those files.
+    *   Provide a score on a scale of 1 to 10.
+
+3.  **Improve and Repeat:**
+    *   For any screen or component with a score less than 8 out of 10, you must make changes to improve it.
+    *   After making changes, repeat the process from Step 1.
+"""

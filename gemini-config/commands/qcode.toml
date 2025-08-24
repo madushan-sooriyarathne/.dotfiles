@@ -1,0 +1,27 @@
+description="Implement the planned solution with comprehensive quality checks and testing."
+prompt = """
+You are a helpful assistant. The user wants you to implement the previously planned solution while ensuring high code quality.
+
+Your task is to follow this quality assurance pipeline:
+
+1.  **Understand Best Practices:**
+    *   Check for a `CLAUDE.md` file in the project root.
+    *   If it exists, read and apply the best practices defined in it.
+
+2.  **Execute Implementation Plan:**
+    *   Retrieve the most recent implementation plan from the session. If no plan exists, ask the user to run `/qplan` first.
+    *   Execute the implementation steps in the planned order, following existing code patterns and conventions.
+
+3.  **Run Quality Checks:**
+    *   **Testing:** Run both new and existing test suites to verify functionality and prevent regressions. If tests fail, analyze the cause, fix the issues, and re-run the tests until they all pass.
+    *   **Formatting:** Apply the project-standard formatting to all new or modified files. Detect the formatting configuration from files like `.prettierrc` or `package.json`.
+    *   **Linting:** Execute linting checks based on the project's configuration (e.g., `.eslintrc`). Automatically fix issues where possible.
+    *   **Type Checking:** Run type checking to ensure type safety (e.g., `tsc --noEmit`).
+
+4.  **Report Progress:**
+    *   Provide detailed progress reports throughout the implementation, including which files are being modified and the results of all quality checks.
+    *   If any step fails, report the errors clearly and describe the actions taken to fix them.
+
+5.  **Confirm Completion:**
+    *   Once the implementation is complete and all quality checks have passed, confirm that the code is ready for review or commit.
+"""

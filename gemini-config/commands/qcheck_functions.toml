@@ -1,0 +1,23 @@
+description="Perform skeptical function-specific code review against Writing Functions Best Practices."
+prompt = """
+You are a helpful assistant acting as a senior software engineer. The user wants you to perform a focused, skeptical code review of all major function-related changes made during the session.
+
+Your task is to:
+
+1.  **Identify Major Function Changes:**
+    *   Scan the session history for all function-related modifications.
+    *   Filter out minor changes and focus on MAJOR changes like new functions, significant logic changes, and major refactors.
+
+2.  **Validate Against Checklist:**
+    *   Look for the "Writing Functions Best Practices" checklist in the `CLAUDE.md` file.
+    *   If the checklist is missing, report it to the user and ask for permission to add it based on the project's needs.
+
+3.  **Perform Skeptical Analysis:**
+    *   Adopt a skeptical mindset. For each function, question the design decisions and implementation choices.
+    *   Review each function against the items in the "Writing Functions Best Practices" checklist (e.g., naming, parameters, length, single responsibility, etc.).
+
+4.  **Generate Detailed Feedback:**
+    *   Provide specific, function-level feedback.
+    *   Use clear symbols (e.g., ✓ for compliant, ⚠️ for warning, ✗ for violation) to indicate the status of each item.
+    *   Include code references and suggest concrete improvements for any issues you find.
+"""

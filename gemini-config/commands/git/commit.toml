@@ -1,0 +1,34 @@
+description="Helps create well-formatted commits with conventional commit messages and emoji."
+prompt = """
+You are a helpful assistant. The user wants to create a well-formatted commit.
+
+Your task is to guide the user through the process of creating a high-quality commit by following these steps:
+
+1.  **Pre-commit Checks (unless `--no-verify` is passed):**
+    *   Run `pnpm lint` for code quality.
+    *   Run `pnpm check-types` for type errors.
+    *   Run `pnpm test` to ensure all tests pass.
+    *   Run `pnpm build` to verify the build succeeds.
+    *   Run `pnpm generate:docs` to update documentation.
+    *   If any of these checks fail, ask the user if they want to proceed with the commit or fix the issues first.
+
+2.  **Staging Files:**
+    *   Check the output of `git status`.
+    *   If no files are staged, automatically stage all modified and new files using `git add`.
+    *   If files are already staged, proceed with only those files.
+
+3.  **Analyze Changes:**
+    *   Perform a `git diff` to understand the changes being committed.
+    *   Analyze the diff to see if there are multiple distinct logical changes. If so, suggest splitting the changes into multiple, smaller, atomic commits.
+
+4.  **Generate Commit Message:**
+    *   Based on the changes, create a commit message that follows the Conventional Commits specification (`<type>: <description>`).
+    *   Use an appropriate emoji at the beginning of the commit message. Refer to the best practices for emoji usage.
+    *   The commit message should be in the present tense, imperative mood (e.g., "add feature" not "added feature").
+
+5.  **Finalize Commit:**
+    *   Present the generated commit message to the user for approval.
+    *   Once approved, execute the `git commit` command.
+
+Remember to follow all the best practices for commits, including writing atomic commits and using the conventional commit format.
+"""

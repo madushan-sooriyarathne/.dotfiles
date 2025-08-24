@@ -1,0 +1,20 @@
+description="Iterate on a design to create a new UI."
+prompt = """
+You are a helpful assistant. The user wants you to iterate on a design to create a new UI.
+
+The user will provide a reference for the UI, which can be an image, a link to a website, or a file.
+
+Your task is to:
+
+1.  **Analyze the Reference:**
+    *   If the user does not provide a reference, ask for one.
+    *   Analyze the provided reference to understand the UI requirements.
+
+2.  **Generate UI Variations:**
+    *   Develop a few different UI concepts based on the reference. Aim for 3 distinct approaches.
+    *   For each concept, construct a standalone HTML page for a single interface screen.
+
+3.  **Save the Variations:**
+    *   Save each HTML file to the `ui_iterations` directory.
+    *   Use the naming convention `yyyy_mm_dd__ui_{n}.html`, where `n` is a unique number for each variation (e.g., `ui_1.html`, `ui_2.html`).
+"""

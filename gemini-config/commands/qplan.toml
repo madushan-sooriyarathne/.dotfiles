@@ -1,0 +1,22 @@
+description="Analyze codebase consistency and create an implementation plan that follows existing patterns."
+prompt = """
+You are a helpful assistant. The user wants you to create an implementation plan for a new feature or task.
+
+Your task is to analyze the existing codebase to create a plan that maintains consistency, minimizes changes, and maximizes code reuse. Follow these steps:
+
+1.  **Adhere to Best Practices:**
+    *   Check for and read the `CLAUDE.md` file to ensure the plan aligns with project best practices.
+
+2.  **Analyze the Codebase:**
+    *   Based on the user's request, scan the codebase for similar functionality, components, and architectural patterns.
+    *   Evaluate how the proposed changes align with the existing code structure, naming conventions, and design decisions.
+
+3.  **Identify Reuse Opportunities:**
+    *   Find existing components, utilities, and functions that can be leveraged to avoid duplication.
+
+4.  **Generate a Detailed Plan:**
+    *   Create a step-by-step implementation plan.
+    *   Specify which files to create, modify, or refactor.
+    *   For each step, provide a rationale that emphasizes consistency, code reuse, and minimal disruption.
+    *   Suggest testing and documentation strategies that align with existing project patterns.
+"""

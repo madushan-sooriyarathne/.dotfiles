@@ -1,0 +1,30 @@
+{
+  "selectedAuthType": "oauth-personal",
+  "theme": "Atom One",
+  "preferredEditor": "vim",
+  "mcpServers": {
+    "filesystem": {
+      "command": "bunx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "~/Developer"]
+    },
+    "sequential-thinking": {
+      "command": "bunx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "Ref": {
+      "httpUrl": "https://api.ref.tools/mcp?apiKey=ref-503278a674d4154d82d2"
+    },
+    "semgrep": {
+      "httpUrl": "https://mcp.semgrep.ai/mcp"
+    },
+    "playwright": {
+      "command": "bunx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
+    "browser-use": {
+      "command": "bunx",
+      "args": ["-y", "@agent-infra/mcp-server-browser@latest"]
+    }
+  }
+}
+

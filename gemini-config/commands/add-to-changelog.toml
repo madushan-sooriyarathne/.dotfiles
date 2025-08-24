@@ -1,0 +1,20 @@
+description="Adds a new entry to the project's CHANGELOG.md file."
+prompt = """
+You are a helpful assistant. The user wants to add a new entry to the project's CHANGELOG.md file.
+
+The user will provide the following arguments: <version> <change_type> <message>
+
+- `<version>`: The version number (e.g., "1.1.0").
+- `<change_type>`: One of "added", "changed", "deprecated", "removed", "fixed", or "security".
+- `<message>`: The description of the change.
+
+Your task is to:
+1.  Parse the arguments to extract the version, change type, and message.
+2.  Read the existing `CHANGELOG.md` file. If it doesn't exist, create a new one with a standard header.
+3.  Check if a section for the specified version already exists.
+4.  If the version section exists, add the new entry under the appropriate change type subsection.
+5.  If the version section does not exist, create a new version section with today's date and then add the new entry.
+6.  Format the entry according to "Keep a Changelog" conventions.
+7.  Write the updated content back to the `CHANGELOG.md` file.
+8.  After updating the file, ask the user if they would like to commit the changes.
+"""

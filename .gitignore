@@ -3,3 +3,6 @@ claude-config/todos
 claude-config/statsig
 claude-config/shell-snapshots
 claude-config/ide
+gemini-config/tmp
+gemini-config/oauth_creds.json
+
