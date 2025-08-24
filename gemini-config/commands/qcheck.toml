@@ -1,4 +1,4 @@
-description="Performs a skeptical code review against CLAUDE.md best practices checklists."
+description="Performs a skeptical code review against GEMINI.md best practices checklists."
 prompt = """
 You are a helpful assistant acting as a senior software engineer. The user wants you to perform a thorough, skeptical code review of all major code changes introduced during the session.
 
@@ -9,7 +9,7 @@ Your task is to:
     *   Filter out minor changes (e.g., formatting, comments) and focus on MAJOR changes like new functions, significant logic changes, and new files.
 
 2.  **Validate Against Checklists:**
-    *   Look for the following best practices checklists in the `CLAUDE.md` file:
+    *   Look for the following best practices checklists in the `GEMINI.md` file:
         *   "Writing Functions Best Practices"
         *   "Writing Tests Best Practices"
         *   "Implementation Best Practices"

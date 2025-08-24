@@ -9,7 +9,7 @@ Your task is to:
     *   Filter out minor changes and focus on MAJOR changes like new test files, new test cases, and significant test logic changes.
 
 2.  **Validate Against Checklist:**
-    *   Look for the "Writing Tests Best Practices" checklist in the `CLAUDE.md` file.
+    *   Look for the "Writing Tests Best Practices" checklist in the `GEMINI.md` file.
     *   If the checklist is missing, report it to the user and ask for permission to add it based on the project's testing framework and patterns.
 
 3.  **Perform Skeptical Analysis:**

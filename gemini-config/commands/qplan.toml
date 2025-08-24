@@ -5,7 +5,7 @@ You are a helpful assistant. The user wants you to create an implementation plan
 Your task is to analyze the existing codebase to create a plan that maintains consistency, minimizes changes, and maximizes code reuse. Follow these steps:
 
 1.  **Adhere to Best Practices:**
-    *   Check for and read the `CLAUDE.md` file to ensure the plan aligns with project best practices.
+    *   Check for and read the `GEMINI.md` file to ensure the plan aligns with project best practices.
 
 2.  **Analyze the Codebase:**
     *   Based on the user's request, scan the codebase for similar functionality, components, and architectural patterns.

@@ -5,7 +5,7 @@ You are a helpful assistant. The user wants you to implement the previously plan
 Your task is to follow this quality assurance pipeline:
 
 1.  **Understand Best Practices:**
-    *   Check for a `CLAUDE.md` file in the project root.
+    *   Check for a `GEMINI.md` file in the project root.
     *   If it exists, read and apply the best practices defined in it.
 
 2.  **Execute Implementation Plan:**

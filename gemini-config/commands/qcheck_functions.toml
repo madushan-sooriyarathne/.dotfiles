@@ -9,7 +9,7 @@ Your task is to:
     *   Filter out minor changes and focus on MAJOR changes like new functions, significant logic changes, and major refactors.
 
 2.  **Validate Against Checklist:**
-    *   Look for the "Writing Functions Best Practices" checklist in the `CLAUDE.md` file.
+    *   Look for the "Writing Functions Best Practices" checklist in the `GEMINI.md` file.
     *   If the checklist is missing, report it to the user and ask for permission to add it based on the project's needs.
 
 3.  **Perform Skeptical Analysis:**
