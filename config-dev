@@ -52,7 +52,7 @@ echo "🍺 Installing applications with Homebrew..."
 # Check if brew is installed
 if ! command -v brew &> /dev/null; then
     echo "❌ Homebrew not found. Please install Homebrew first:"
-    echo "   /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+    echo "   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)""
     exit 1
 fi
 
@@ -140,6 +140,39 @@ else
     echo "  ✅ Cloned Neovim config successfully"
 fi
 
+# 5. Install/Update gemini-cli and claude-code
+echo "📦 Installing/Updating gemini-cli and claude-code..."
+
+# Check for bun
+if ! command -v bun &> /dev/null; then
+    echo "  ❌ bun is not installed. Please install it first."
+    echo "     curl -fsSL https://bun.sh/install | bash"
+else
+    # Install/Update gemini-cli
+    echo "  Checking gemini-cli installation..."
+    if command -v gemini &> /dev/null; then
+        echo "  gemini-cli is installed, updating..."
+        bunx add -g @google/gemini-cli@latest
+        echo "  ✅ gemini-cli updated to latest version"
+    else
+        echo "  gemini-cli not found, installing..."
+        bunx add -g @google/gemini-cli@latest
+        echo "  ✅ Installed gemini-cli"
+    fi
+
+    # Install/Update claude-code
+    echo "  Checking claude-code installation..."
+    if command -v claude &> /dev/null; then
+        echo "  claude-code is installed, updating..."
+        claude update
+        echo "  ✅ claude-code updated to latest version"
+    else
+        echo "  claude-code not found, installing..."
+        bunx add -g @anthropic-ai/claude-code@latest
+        echo "  ✅ Installed claude-code"
+    fi
+fi
+
 echo ""
 echo "🎉 Development environment configuration completed successfully!"
 echo ""
@@ -149,6 +182,7 @@ echo "   • Created symlinks for dotfiles configuration"
 echo "   • Installed/updated Neovim to latest version"
 echo "   • Installed development tools: stylua, shfmt, prettier"
 echo "   • Set up/updated Neovim configuration from git repository"
+echo "   • Installed/updated gemini-cli and claude-code"
 echo ""
 echo "💡 You may need to restart your terminal or run 'source ~/.zshrc' for changes to take effect."
 echo "💡 Run 'nvim' to start Neovim with your configuration."
