@@ -5,11 +5,18 @@
   "mcpServers": {
     "filesystem": {
       "command": "bunx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "~/Developer"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "~/Developer"
+      ]
     },
     "sequential-thinking": {
       "command": "bunx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
     },
     "Ref": {
       "httpUrl": "https://api.ref.tools/mcp?apiKey=ref-503278a674d4154d82d2"
@@ -19,12 +26,20 @@
     },
     "playwright": {
       "command": "bunx",
-      "args": ["-y", "@playwright/mcp@latest"]
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
     },
     "browser-use": {
       "command": "bunx",
-      "args": ["-y", "@agent-infra/mcp-server-browser@latest"]
+      "args": [
+        "-y",
+        "@agent-infra/mcp-server-browser@latest"
+      ]
     }
-  }
+  },
+  "vimMode": true,
+  "showMemoryUsage": false,
+  "hideBanner": false
 }
-
