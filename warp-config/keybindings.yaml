@@ -1,4 +1,2 @@
 ---
-"editor_view:insert_autosuggestion": tab
 "workspace:toggle_ai_assistant": shift-cmd-A
-"input:open_completion_suggestions": ctrl-space
