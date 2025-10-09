@@ -1,7 +1,9 @@
 {
-  "selectedAuthType": "oauth-personal",
-  "theme": "Atom One",
-  "preferredEditor": "vim",
+  "ui": {
+    "hideBanner": false,
+    "showMemoryUsage": false,
+    "theme": "Atom One"
+  },
   "mcpServers": {
     "filesystem": {
       "command": "bunx",
@@ -39,7 +41,13 @@
       ]
     }
   },
-  "vimMode": true,
-  "showMemoryUsage": false,
-  "hideBanner": false
+  "general": {
+    "preferredEditor": "vim",
+    "vimMode": false
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  }
 }

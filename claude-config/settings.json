@@ -1,4 +1,9 @@
 {
+  "permissions": {
+    "deny": [
+      "Read(.git/**, .turbo/**, node_modules/**, **/.sanity/**, **/.turbo/**, **/node_modules/**, **/coverage/**, **/dist/**)"
+    ]
+  },
   "hooks": {
     "Stop": [
       {
@@ -23,10 +28,5 @@
       }
     ]
   },
-
-  "permissions": {
-    "deny": [
-      "Read(.git/**, .turbo/**, node_modules/**, **/.sanity/**, **/.turbo/**, **/node_modules/**, **/coverage/**, **/dist/**)"
-    ]
-  }
+  "alwaysThinkingEnabled": false
 }
