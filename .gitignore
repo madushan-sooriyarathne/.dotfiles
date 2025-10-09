@@ -5,4 +5,8 @@ claude-config/shell-snapshots
 claude-config/ide
 gemini-config/tmp
 gemini-config/oauth_creds.json
+claude-config/debug/
+claude-config/file-history/
+claude-config/history.jsonl
+gemini-config/settings.json.orig
 
