@@ -1,0 +1,119 @@
+[
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "sidebarFocus || explorerViewletFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "-workbench.action.replace"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusSideBar",
+    "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.focusPanel",
+    "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "panelFocus"
+  },
+  {
+    "key": "tab",
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+  },
+  {
+    "key": "shift+l",
+    "command": "-workbench.action.nextEditor"
+  },
+  {
+    "key": "shift+l",
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+  },
+  {
+    "key": "tab",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelFocus && vim.active && vim.mode == 'Normal'"
+  },
+  {
+    "key": "shift+h",
+    "command": "-workbench.action.previousEditor"
+  },
+  {
+    "key": "shift+h",
+    "command": "workbench.action.previousEditor",
+    "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-extension.vim_ctrl+k",
+    "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "enter",
+    "command": "list.toggleExpand",
+    "when": "explorerViewletFocus && filesExplorerFocus && explorerResourceIsFolder"
+  },
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "explorerViewletFocus && filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+space shift+'",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+space shift+5",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "cmd+c",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorTextFocus && vim.active && vim.mode == 'insert'"
+  },
+  {
+    "key": "shift+8",
+    "command": "flash-vscode.jump.*",
+    "when": "editorTextFocus && flash-vscode.active"
+  },
+  {
+    "key": "shift+8",
+    "command": "-flash-vscode.jump.*",
+    "when": "editorTextFocus && flash-vscode.active"
+  }
+]

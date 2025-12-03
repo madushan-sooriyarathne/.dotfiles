@@ -1,0 +1,149 @@
+{
+  "workbench.colorTheme": "Tokyo Night",
+  "git.confirmSync": false,
+  "editor.fontFamily": "'JetBrainsMonoNL Nerd Font Mono'",
+  "git.autofetch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["k", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["bookmarks.toggle"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["bookmarks.list"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "s", "r"],
+      "commands": ["workbench.action.replaceInFiles"]
+    },
+
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"],
+      "when": "true"
+    },
+
+    {
+      "before": ["<leader>", "f", "w"],
+      "commands": ["workbench.action.findInFiles"],
+      "when": "true"
+    },
+
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+
+    {
+      "before": ["s"],
+      "commands": ["flash-vscode.start"]
+    },
+    {
+      "before": ["S"],
+      "commands": ["flash-vscode.startSelection"]
+    },
+    {
+      "before": ["<BS>"],
+      "commands": ["flash-vscode.backspace"]
+    },
+
+    {
+      "before": ["<leader>", "r", "a"],
+      "commands": ["editor.action.rename"]
+    },
+
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.actions.view.problems"],
+      "when": "editorTextFocus"
+    },
+
+    {
+      "before": ["<leader>", "b", "d"],
+      "commands": ["workbench.action.closeActiveEditor"],
+      "when": "editorTextFocus"
+    },
+
+    {
+      "before": ["<leader>", "b", "P"],
+      "commands": ["workbench.action.closeAllEditors"],
+      "when": "editorTextFocus"
+    },
+
+    {
+      "before": ["g", "w"],
+      "after": ["*"],
+      "when": "editorTextFocus"
+    },
+
+    {
+      "before": ["w", "g"],
+      "commands": [":nohlsearch"],
+      "when": "editorTextFocus && vim.active"
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
+    }
+  ],
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
+  "antigravity.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
+  "antigravity.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
+  "editor.fontVariations": false,
+  "debug.console.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "window.zoomLevel": 0.7,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "go.formatTool": "gofmt",
+  "javascript.format.enable": false,
+  "typescript.format.enable": false
+}

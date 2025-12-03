@@ -46,6 +46,16 @@ create_symlink "$HOME/.dotfiles/warp-config" "$HOME/.warp"
 create_symlink "$HOME/.dotfiles/wezterm/wezterm.lua" "$HOME/.wezterm.lua"
 create_symlink "$HOME/.dotfiles/.tmux.conf" "$HOME/.tmux.conf"
 
+# Create Antigravity configuration directory if it doesn't exist
+antigravity_user_dir="$HOME/Library/Application Support/Antigravity/User"
+if [ ! -d "$antigravity_user_dir" ]; then
+    echo "  Creating Antigravity User directory..."
+    mkdir -p "$antigravity_user_dir"
+fi
+
+create_symlink "$HOME/.dotfiles/google-antigravity/keybinding.json" "$antigravity_user_dir/keybindings.json"
+create_symlink "$HOME/.dotfiles/google-antigravity/settings.json" "$antigravity_user_dir/settings.json"
+
 # 3. Install applications with brew
 echo "🍺 Installing applications with Homebrew..."
 
@@ -179,6 +189,7 @@ echo ""
 echo "📝 Summary of changes:"
 echo "   • Made all files in ~/.dotfiles/bin/ executable"
 echo "   • Created symlinks for dotfiles configuration"
+echo "   • Created symlinks for Antigravity configuration"
 echo "   • Installed/updated Neovim to latest version"
 echo "   • Installed development tools: stylua, shfmt, prettier"
 echo "   • Set up/updated Neovim configuration from git repository"
