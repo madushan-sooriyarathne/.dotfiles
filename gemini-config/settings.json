@@ -9,7 +9,7 @@
       "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
     },
     "Ref": {
-      "httpUrl": "https://api.ref.tools/mcp?apiKey=ref-503278a674d4154d82d2"
+      "httpUrl": "https://api.ref.tools/mcp?apiKey=<API_KEY>"
     },
     "semgrep": {
       "httpUrl": "https://mcp.semgrep.ai/mcp"
