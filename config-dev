@@ -162,11 +162,11 @@ else
     echo "  Checking gemini-cli installation..."
     if command -v gemini &> /dev/null; then
         echo "  gemini-cli is installed, updating..."
-        bunx add -g @google/gemini-cli@latest
+        bun add -g @google/gemini-cli@latest
         echo "  ✅ gemini-cli updated to latest version"
     else
         echo "  gemini-cli not found, installing..."
-        bunx add -g @google/gemini-cli@latest
+        bun add -g @google/gemini-cli@latest
         echo "  ✅ Installed gemini-cli"
     fi
 
@@ -178,7 +178,7 @@ else
         echo "  ✅ claude-code updated to latest version"
     else
         echo "  claude-code not found, installing..."
-        bunx add -g @anthropic-ai/claude-code@latest
+        bun add -g @anthropic-ai/claude-code@latest
         echo "  ✅ Installed claude-code"
     fi
 fi
