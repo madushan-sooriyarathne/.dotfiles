@@ -1,24 +1,12 @@
 {
-  "ui": {
-    "hideBanner": false,
-    "showMemoryUsage": false,
-    "theme": "Atom One"
-  },
   "mcpServers": {
     "filesystem": {
       "command": "bunx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "~/Developer"
-      ]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "~/Developer"]
     },
     "sequential-thinking": {
       "command": "bunx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-sequential-thinking"
-      ]
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
     },
     "Ref": {
       "httpUrl": "https://api.ref.tools/mcp?apiKey=ref-503278a674d4154d82d2"
@@ -28,26 +16,34 @@
     },
     "playwright": {
       "command": "bunx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
+    "figma": {
+      "command": "bunx",
       "args": [
         "-y",
-        "@playwright/mcp@latest"
+        "figma-developer-mcp",
+        "--figma-api-key=<FIGMA_API_KEY>",
+        "--stdio"
       ]
     },
     "browser-use": {
       "command": "bunx",
-      "args": [
-        "-y",
-        "@agent-infra/mcp-server-browser@latest"
-      ]
+      "args": ["-y", "@agent-infra/mcp-server-browser@latest"]
     }
-  },
-  "general": {
-    "preferredEditor": "vim",
-    "vimMode": false
   },
   "security": {
     "auth": {
       "selectedType": "oauth-personal"
     }
+  },
+  "ui": {
+    "hideBanner": false,
+    "showMemoryUsage": false,
+    "theme": "Atom One"
+  },
+  "general": {
+    "preferredEditor": "vim",
+    "vimMode": false
   }
 }
