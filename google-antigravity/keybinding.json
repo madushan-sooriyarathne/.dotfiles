@@ -57,19 +57,19 @@
     "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
   },
   {
-    "key": "a",
+    "key": "ctrl+a",
     "command": "explorer.newFile",
-    "when": "explorerViewletFocus"
+    "when": "explorerViewletFocus && !explorerResourceIsRenaming && !inExplorerResourceInput"
   },
   {
-    "key": "r",
+    "key": "ctrl+r",
     "command": "renameFile",
-    "when": "explorerViewletFocus"
+    "when": "explorerViewletFocus && !explorerResourceIsRenaming && !inExplorerResourceInput"
   },
   {
-    "key": "d",
+    "key": "ctrl+d",
     "command": "deleteFile",
-    "when": "explorerViewletFocus"
+    "when": "explorerViewletFocus && !explorerResourceIsRenaming && !inExplorerResourceInput"
   },
   {
     "key": "enter",
