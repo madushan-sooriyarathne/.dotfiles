@@ -145,5 +145,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "go.formatTool": "gofmt",
   "javascript.format.enable": false,
-  "typescript.format.enable": false
+  "typescript.format.enable": false,
+  "json.schemaDownload.enable": true
 }
