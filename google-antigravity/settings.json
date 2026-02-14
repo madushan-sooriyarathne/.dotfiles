@@ -6,129 +6,129 @@
   "vim.insertModeKeyBindings": [
     {
       "before": ["k", "j"],
-      "after": ["<Esc>"],
+      "after": ["<Esc>"]
     },
     {
       "before": ["j", "k"],
-      "after": ["<Esc>"],
-    },
+      "after": ["<Esc>"]
+    }
   ],
   "vim.visualModeKeyBindings": [
     {
       "before": [">"],
-      "commands": ["editor.action.indentLines"],
+      "commands": ["editor.action.indentLines"]
     },
     {
       "before": ["<"],
-      "commands": ["editor.action.outdentLines"],
-    },
+      "commands": ["editor.action.outdentLines"]
+    }
   ],
   "vim.normalModeKeyBindings": [
     {
       "before": ["<leader>", "m"],
       "commands": ["bookmarks.toggle"],
-      "silent": true,
+      "silent": true
     },
     {
       "before": ["<leader>", "b"],
-      "commands": ["bookmarks.list"],
-    },
+      "commands": ["bookmarks.list"]
+    }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "s", "r"],
-      "commands": ["workbench.action.replaceInFiles"],
+      "commands": ["workbench.action.replaceInFiles"]
     },
 
     {
       "before": ["<leader>", "f", "f"],
       "commands": ["workbench.action.quickOpen"],
-      "when": "true",
+      "when": "true"
     },
 
     {
       "before": ["<leader>", "f", "w"],
       "commands": ["workbench.action.findInFiles"],
-      "when": "true",
+      "when": "true"
     },
 
     {
       "before": ["<leader>", "n"],
-      "commands": ["workbench.action.toggleSidebarVisibility"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
     },
 
     {
       "before": ["<leader>", "e"],
-      "commands": ["workbench.view.explorer"],
+      "commands": ["workbench.view.explorer"]
     },
 
     {
       "before": ["s"],
-      "commands": ["flash-vscode.start"],
+      "commands": ["flash-vscode.start"]
     },
     {
       "before": ["S"],
-      "commands": ["flash-vscode.startSelection"],
+      "commands": ["flash-vscode.startSelection"]
     },
     {
       "before": ["<BS>"],
-      "commands": ["flash-vscode.backspace"],
+      "commands": ["flash-vscode.backspace"]
     },
 
     {
       "before": ["<leader>", "r", "a"],
-      "commands": ["editor.action.rename"],
+      "commands": ["editor.action.rename"]
     },
 
     {
       "before": ["K"],
-      "commands": ["editor.action.showHover"],
+      "commands": ["editor.action.showHover"]
     },
 
     {
       "before": ["]", "d"],
-      "commands": ["editor.action.marker.next"],
+      "commands": ["editor.action.marker.next"]
     },
     {
       "before": ["[", "d"],
-      "commands": ["editor.action.marker.prev"],
+      "commands": ["editor.action.marker.prev"]
     },
 
     {
       "before": ["<leader>", "t"],
       "commands": ["workbench.actions.view.problems"],
-      "when": "editorTextFocus",
+      "when": "editorTextFocus"
     },
 
     {
       "before": ["<leader>", "b", "d"],
       "commands": ["workbench.action.closeActiveEditor"],
-      "when": "editorTextFocus",
+      "when": "editorTextFocus"
     },
 
     {
       "before": ["<leader>", "b", "P"],
       "commands": ["workbench.action.closeAllEditors"],
-      "when": "editorTextFocus",
+      "when": "editorTextFocus"
     },
 
     {
       "before": ["g", "w"],
       "after": ["*"],
-      "when": "editorTextFocus",
+      "when": "editorTextFocus"
     },
 
     {
       "before": ["w", "g"],
       "commands": [":nohlsearch"],
-      "when": "editorTextFocus && vim.active",
-    },
+      "when": "editorTextFocus && vim.active"
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["p"],
-      "after": ["p", "g", "v", "y"],
-    },
+      "after": ["p", "g", "v", "y"]
+    }
   ],
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -148,5 +148,5 @@
   "typescript.format.enable": false,
   "json.schemaDownload.enable": true,
   "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app",
-  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false
 }
