@@ -1,2 +1,3 @@
 ---
 "workspace:toggle_ai_assistant": shift-cmd-A
+"editor_view:insert_newline": ctrl-j
