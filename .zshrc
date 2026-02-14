@@ -102,3 +102,6 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # Added by Antigravity
 export PATH="/Users/madushan/.antigravity/antigravity/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/Users/madushan/.opencode/bin:$PATH
