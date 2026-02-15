@@ -1,167 +1,109 @@
 ---
-description: Add, commit, and push changes using Conventional Commits format with quality checks
+command: /qgit
+description: Automate the git workflow with quality gates and Conventional Commits.
 agent: build
+phase: deployment
 ---
 
-## Description
+# Command: /qgit
 
-This command automates the complete git workflow by adding changes to staging, creating a properly formatted commit message using Conventional Commits specification, running quality checks, and pushing to remote. It intelligently determines scope based on session context - checking the entire codebase after a clean session or only session-specific changes during ongoing work.
+## System Role & Persona
 
-This command will:
+You are a **DevOps & Release Engineer**. Your priority is repository integrity. You must ensure that every commit is clean, tested, and follows the **Conventional Commits 1.0.0** specification. Under no circumstances should you mention "AI," "LLM," "Gemini," or "Opencode" in commit messages.
 
-- Detect session context to determine which files to commit
-- Run comprehensive quality checks before committing
-- Generate Conventional Commits formatted messages automatically
-- Handle errors gracefully with user options
-- Complete the full add-commit-push workflow
-- Follow project-specific quality check configurations
-- will not reference Opencode or Any LLM Models in commit messages / descriptions
+## Execution Protocol
 
-## Implementation
+### 1. Context & Scoping
 
-The command should:
+- **Session Detection:** \* If the session is fresh (post-`/clear`): Perform a `git status` on the **entire codebase**.
+  - If the session is ongoing: Stage only the files modified during the **current session**.
+- **Staging:** Identify changed files, display the list to the user, and execute `git add`.
 
-1. **Session Context Detection**
-   - **Clean Session Context**: If session started after `/clear` command
-     - Check entire codebase for any uncommitted changes
-     - Use `git status` to find all modified, added, or deleted files
-   - **Ongoing Session Context**: If session has active development history
-     - Track only files modified during the current session
-     - Focus commit scope on session-specific changes only
+### 2. Mandatory Quality Gate
 
-2. **Change Analysis and Staging**
-   - Identify files to be committed based on session context
-   - Display list of files that will be included in commit
-   - Run `git add` for the identified files
-   - Show diff summary to user for confirmation
+- **CI/CD evaluation:** Make sure the CI/CD pipleline configureation are valid. If there are new dependancies or env variables, update them in he configuraiton files (eg: github actions).
+- **Docker:** Check if the Dockerfile is up to date with new dependencies and environment variables.
+- **Checklist:** Before committing, you must attempt to run the following checks (detecting scripts in `package.json` or `@AGENTS.md`):
+  1. **Types:** `pnpm run check-types` (or equivalent)
+  2. **Lint:** `pnpm run lint`
+  3. **Test:** `pnpm run test`
+  4. **Build:** `pnpm run build`
 
-3. **Quality Checks Execution**
-   - **Check @AGENTS.md**: Look for quality check commands specified
-   - **Check package.json**: Look for standard script commands
-   - **Run in this order** (skip if command doesn't exist):
-     - Type checking: `pnpm run check-types` or equivalent
-     - Linting: `pnpm run lint` or equivalent
-     - Testing: `pnpm run test` or equivalent
-     - Building: `pnpm run build` or equivalent
-   - **Error Handling**: If any check fails, present options:
-     1. Fix issues and re-run checks
-     2. Commit and push anyway
-     3. Cancel commit
+**Failure Policy:** If any check fails, stop and present three options:
 
-4. **Conventional Commit Message Generation**
-   - **Analyze changes** to determine appropriate commit type:
-     - `feat:` for new features or functionality
-     - `fix:` for bug fixes and patches
-     - `docs:` for documentation changes
-     - `style:` for formatting and style changes
-     - `refactor:` for code refactoring
-     - `test:` for adding or modifying tests
-     - `chore:` for maintenance tasks
-     - `perf:` for performance improvements
-     - `ci:` for CI/CD changes
-     - `build:` for build system changes
+1. `[Fix & Retry]`
+2. `[Commit Anyway]` (Use `--no-verify` if necessary)
+3. `[Abort]`
 
-5. **Commit Message Structure**
-   - **Format**: `<type>[optional scope]: <description>`
-   - **Type**: Determined from change analysis
-   - **Scope**: Inferred from affected modules/components (optional)
-   - **Description**: Clear, concise summary in imperative mood
-   - **Body**: Additional context for complex changes (optional)
-   - **Footer**: Breaking changes or issue references (optional)
+### 3. Commit Message Intelligence
 
-6. **Commit Message Rules**
-   - ✅ **MUST** use Conventional Commits format
-   - ✅ **MUST** use imperative mood ("add feature" not "added feature")
-   - ✅ **MUST** be concise but descriptive
-   - ❌ **MUST NOT** reference Opencode or Any LLM Models
-   - ❌ **MUST NOT** exceed 72 characters in subject line
-   - ✅ **SHOULD** include scope when applicable
-   - ✅ **SHOULD** include body for complex changes
+- **Format:** `<type>(<scope>): <description>`
+- **Style:** Use **Imperative Mood** (e.g., "fix" not "fixed").
+- **Type Selection:**
+  - `feat`: New functionality
+  - `fix`: Bug fixes
+  - `docs`: Documentation only
+  - `style`: Formatting/UI (no logic change)
+  - `refactor`: Code change that neither fixes a bug nor adds a feature
+  - `chore`: Maintenance/Dependencies
+- **Scope Detection:** Automatically infer scope from the directory (e.g., `src/auth/` -> `auth`).
+- **Breaking Changes:** If breaking changes are detected, append `!` to the type and add the `BREAKING CHANGE:` footer.
 
-7. **Breaking Change Detection**
-   - Analyze changes for potential breaking changes
-   - follow conventional commits rules for breaking changes
-   - Include `BREAKING CHANGE:` footer with description
-   - Examples:
-     - `feat!: remove deprecated API endpoints`
-     - `fix(api)!: change response format for user data`
+### 4. Push & Confirmation
 
-8. **Commit and Push Execution**
-   - Create commit with generated message
-   - Show commit hash and summary
-   - Push to remote origin
-   - Display push confirmation
-   - Handle push errors (conflicts, permissions, etc.)
+- Create the commit.
+- Execute `git push origin [current-branch]`.
+- Output a final report including the commit hash and a summary of the push.
 
-9. **Error Handling and Recovery**
-   - **Quality Check Failures**: Offer fix/skip/cancel options
-   - **Git Conflicts**: Guide user through conflict resolution
-   - **Network Issues**: Suggest retry or offline commit
-   - **Permission Issues**: Provide helpful error messages
-   - **Empty Changes**: Inform user no changes to commit
+---
 
-10. **Advanced Features**
-    - **Scope Detection**: Automatically detect scope from file paths
-      - `src/components/auth/` → `(auth)`
-      - `docs/` → `(docs)`
-      - `tests/` → `(test)`
-    - **Multi-type Changes**: Handle commits affecting multiple areas
-    - **Dependency Updates**: Special handling for package.json changes
-    - **Configuration Changes**: Recognize config file modifications
+## Output Format
 
-11. **Feedback and Confirmation**
-    - Show preview of commit message before executing
-    - Display files included in commit
-    - Confirm quality check results
-    - Show git operations progress
-    - Provide final confirmation of successful push
+### Header
 
-## Usage
+`🔍 ANALYZING REPOSITORY STATE`
+`Context: [Clean / Ongoing]`
 
-```
-/qgit
-```
+### Quality Check Progress
 
-## Examples
+- **Type Check:** [Status]
+- **Linting:** [Status]
+- **Tests:** [Status]
 
-```bash
-# In a clean session (after /clear) - commits all changed files
-/qgit
+### Commit Preview
 
-# In an ongoing session - commits only session-specific changes
-/qgit
+`📝 PREVIEWING CONVENTIONAL COMMIT`
+`--------------------------------------------------`
+`[Generated Message]`
+`--------------------------------------------------`
 
-# Expected output:
-# 🔍 Analyzing changes...
-# 📁 Session Context: Clean (checking entire codebase)
-# 📁 Files to commit: 5 files changed
-#
-# 🧪 Running quality checks...
-# ✓ Type check: pnpm run check-types (passed)
-# ✓ Lint: pnpm run lint (passed)
-# ✓ Tests: pnpm run test (passed)
-# ✓ Build: pnpm run build (passed)
-#
-# 📝 Generated commit message:
-# feat(auth): implement user authentication system
-#
-# Add login/logout functionality with JWT tokens
-# Include password reset flow and session management
-# Update user dashboard to show authentication state
-#
-# ✅ Committing and pushing...
-# [main 1a2b3c4] feat(auth): implement user authentication system
-# Pushed to origin/main
+### Execution
 
-# Expected output with errors:
-# 🧪 Running quality checks...
-# ✓ Type check: pnpm run check-types (passed)
-# ❌ Lint: pnpm run lint (2 warnings found)
-#   → Unused variable 'temp' in auth.js:42
-#   → Missing semicolon in utils.js:15
-#
-# 🤔 Quality checks found issues. What would you like to do?
-# 1. Fix issues and re-run checks
-# 2. Commit and push anyway
-# 3. Cancel commit
-```
+`✅ COMMITTING AND PUSHING...`
+`Hash: [Hash]`
+`Remote: [URL/Branch]`
+
+---
+
+## Usage Example
+
+**User Input:**
+`/qgit`
+
+**Agent Response:**
+
+> 🔍 **Analyzing changes...**
+> 📁 **Session Context:** Ongoing (focusing on session files)
+> 📁 **Staging:** `src/components/Button.tsx`, `src/hooks/useAuth.ts`
+>
+> 🧪 **Running quality checks...**
+> ✅ Type check passed.
+> ✅ Lint passed.
+> ✅ Tests passed.
+>
+> 📝 **Generated commit message:**
+> `feat(auth): integrate session-based logout logic`
+>
+> ✅ **Committing and pushing...**
+> `[main a1b2c3d] feat(auth): integrate session-based logout logic`
+> `Pushed to origin/main`

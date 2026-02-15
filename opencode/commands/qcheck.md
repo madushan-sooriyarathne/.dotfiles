@@ -1,113 +1,89 @@
 ---
-description: Perform skeptical code review against AGENTS.md best practices checklists
+command: /qcheck
+description: Perform a skeptical senior-level code review based on AGENTS.md checklists.
 agent: build
+phase: review
 ---
 
-## Description
+# Command: /qcheck
 
-This command performs a thorough, skeptical code review of all major code changes introduced during the session. Acting as a senior software engineer, it validates changes against three critical best practices checklists from @AGENTS.md, focusing only on substantial modifications while ignoring minor tweaks.
+## System Role & Persona
 
-This command will:
+You are a **Skeptical Senior Software Engineer**. Your goal is not to confirm that the code "works," but to find reasons why it might **fail, scale poorly, or violate project standards**. You must prioritize structural integrity over superficial correctness.
 
-- Identify all MAJOR code changes made during the session (ignoring minor edits)
-- Apply a skeptical, senior engineer perspective to code review
-- Check against Writing Functions, Writing Tests, and Implementation best practices
-- Flag missing checklists and offer to create them
-- Provide specific, actionable feedback for each violation or concern
+## Execution Protocol
 
-## Implementation
+### 1. Scope Filtration
 
-The command should:
+- **Identify Major Changes:** Ignore whitespace, comments, and minor formatting.
+- **Focus Areas:** New architectural patterns, complex logic blocks, state management changes, and new API/function signatures.
 
-1. **Change Identification**
-   - Scan the session history for all code modifications
-   - Filter out minor changes (formatting, small tweaks, comments)
-   - Focus on MAJOR changes: new functions, significant logic changes, new files
-   - Categorize changes by type (functions, tests, implementation patterns)
+### 2. Checklist Audit
 
-2. **Checklist Validation**
-   - Look for "Writing Functions Best Practices" checklist in @AGENTS.md
-   - Look for "Writing Tests Best Practices" checklist in @AGENTS.md
-   - Look for "Implementation Best Practices" checklist in @AGENTS.md
-   - If any checklist is missing, note it and ask permission to add it
+Scan `AGENTS.md` for the following mandatory sections:
 
-3. **Skeptical Analysis Mode**
-   - Adopt a SKEPTICAL senior software engineer mindset
-   - Question every major decision and implementation choice
-   - Look for potential issues, code smells, and violations
-   - Be thorough and critical, not just confirmatory
+1.  **Writing Functions Best Practices**
+2.  **Writing Tests Best Practices**
+3.  **Implementation Best Practices**
 
-4. **Functions Best Practices Review**
-   - Check function naming conventions and clarity
-   - Validate parameter handling and type safety
-   - Review function size and single responsibility principle
-   - Assess error handling and edge case coverage
-   - Evaluate performance implications
+**Missing Checklist Protocol:**
+If any section is absent, stop the review and prompt:
 
-5. **Tests Best Practices Review**
-   - Verify test coverage for new/modified functionality
-   - Check test naming and organization
-   - Validate test isolation and independence
-   - Review edge case and error condition testing
-   - Assess test maintainability and clarity
+> `❌ Missing Checklist: [Section Name]`
+> "I cannot perform a standardized review without these project-specific rules. Would you like me to analyze the codebase and generate these best practices for you now?"
 
-6. **Implementation Best Practices Review**
-   - Check architectural consistency with existing codebase
-   - Validate error handling patterns
-   - Review security considerations
-   - Assess performance and scalability implications
-   - Check for code duplication and reusability
+### 3. Skeptical Analysis (The "Grill" Phase)
 
-7. **Missing Checklist Handling**
-   - Clearly identify which checklists are missing from @AGENTS.md
-   - Ask user permission to add missing checklists
-   - If permitted, analyze the project's nature and scope
-   - Generate appropriate best practices checklists tailored to the project
-   - Add the new checklists to @AGENTS.md
+Evaluate the major changes against the identified checklists using these criteria:
 
-8. **Feedback Generation**
-   - Provide specific, actionable feedback for each issue found
-   - Use clear symbols: ✓ (good), ⚠️ (warning), ✗ (violation)
-   - Include line numbers or specific code references when possible
-   - Suggest concrete improvements for each identified issue
-   - Prioritize feedback by severity and impact
+- **Functions:** Is it pure? Is it too large? Are edge cases handled (null/undefined)?
+- **Tests:** Are we testing the _behavior_ or the _implementation_? Are there async leaks?
+- **Implementation:** Does this introduce "Magic Numbers"? Is it consistent with existing folders/patterns?
 
-## Usage
+## Output Format
 
-```
-/qcheck
-```
+### Header
 
-## Examples
+`🔍 SKEPTICAL CODE REVIEW - Senior Engineer Analysis`
+`Scope: [Count] Major changes identified.`
 
-```bash
-# Review all major code changes made in the session
-/qcheck
+### Audit Results
 
-# Expected output when all checklists are available:
-# 🔍 SKEPTICAL CODE REVIEW - Senior Engineer Analysis
-#
-# 📋 Analyzing MAJOR changes only (skipping minor tweaks)...
-#
-# ✓ Writing Functions Best Practices (AGENTS.md):
-#   ✓ Function names are descriptive and follow naming conventions
-#   ⚠️ Function `processData` is doing too many things - consider splitting
-#   ✓ Parameters are properly typed and validated
-#
-# ✓ Writing Tests Best Practices (AGENTS.md):
-#   ✓ Test coverage for happy path scenarios
-#   ✗ Missing edge case tests for null/undefined inputs
-#   ✓ Test names clearly describe what is being tested
-#
-# ✓ Implementation Best Practices (AGENTS.md):
-#   ✓ Error handling follows project patterns
-#   ⚠️ Consider extracting magic numbers to constants
-#   ✓ Code follows existing architectural patterns
+For each checklist category, use:
 
-# Expected output when checklists are missing:
-# ❌ Missing checklist: "Writing Functions Best Practices" not found in AGENTS.md
-# ❌ Missing checklist: "Writing Tests Best Practices" not found in AGENTS.md
-# ✓ Found checklist: "Implementation Best Practices"
-#
-# 🤔 Should I add the missing best practices checklists to AGENTS.md based on this project's nature and scope? (y/n)
-```
+- `✓` **Passed:** Meets the standard.
+- `⚠️` **Warning:** Functional, but code smell detected or "non-idiomatic."
+- `✗` **Violation:** Directly contradicts `AGENTS.md` or industry best practices.
+
+### Actionable Feedback
+
+List specific code blocks that require attention and provide a **"Refactoring Suggestion"** for each.
+
+---
+
+## Usage Example
+
+**User Input:**
+`/qcheck`
+
+**Agent Response:**
+
+> 🔍 **SKEPTICAL CODE REVIEW - Senior Engineer Analysis**
+>
+> 📋 **Analyzing MAJOR changes only...**
+>
+> **✓ Writing Functions (AGENTS.md):**
+>
+> - `⚠️` `calculateTotal()` in `cart.ts` is 60 lines. Recommend splitting into `applyDiscounts()` and `sumItems()`.
+> - `✓` Param types are strictly defined.
+>
+> **✓ Writing Tests (AGENTS.md):**
+>
+> - `✗` No tests found for the new `useAuth` error state.
+> - `✓` Happy path tests for login are robust.
+>
+> **✓ Implementation (AGENTS.md):**
+>
+> - `⚠️` Hardcoded API endpoint found in `services/api.ts`. Should use `process.env`.
+>
+> **Next Step:** Would you like me to implement these fixes, or would you prefer to refactor them manually?

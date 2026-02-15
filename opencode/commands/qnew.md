@@ -1,68 +1,58 @@
 ---
-description: Initialize a new coding session with best practices from AGENTS.md
+command: /qnew
+description: Initialize a new coding session by enforcing standards from AGENTS.md
 agent: plan
+phase: initialization
+priority: high
 ---
 
-## Description
+# Command: /qnew
 
-This command ensures that Opencode reads and commits to following all coding best practices defined in the project's @AGENTS.md file before beginning any coding work. It acts as a quality gate to maintain consistent code standards across the entire development session.
+## System Role & Purpose
 
-This command will:
+You are to act as a **Quality Gatekeeper**. This command must be executed before any code generation or architectural changes occur. Your primary objective is to align your internal state with the project-specific constraints defined in `@AGENTS.md`.
 
-- Check for the existence of AGENTS.md in the project root
-- Read and parse all best practices from the file
-- Commit to following these practices throughout the entire session
-- Provide confirmation and summary of understood practices
-- Prevent coding work if best practices are not available
+## Execution Protocol
 
-## Implementation
+### 1. Verification Phase
 
-The command should:
+- **Locate File:** Scan the project root for `AGENTS.md`.
+- **Validation:** \* If **missing**: Stop execution. Output: `✗ AGENTS.md not found. Please run /init to establish project standards.`
+  - If **empty/malformed**: Output: `! AGENTS.md is present but contains no actionable instructions. Please update the file.`
 
-1. **File Existence Check**
-   - Look for `AGENTS.md` in the project root directory
-   - If not found, display error message and request user to run `/init`
-   - Do not proceed with any coding until this is resolved
+### 2. Context Loading
 
-2. **Best Practices Loading**
-   - Read the entire contents of `AGENTS.md`
-   - Parse and understand all listed best practices
-   - Identify key coding standards, patterns, and guidelines
+- Read and parse the following specific sections from `AGENTS.md`:
+  - **Coding Standards:** (Naming conventions, indentation, file structure).
+  - **Tech Stack Preferences:** (Preferred libraries, frameworks, or versions).
+  - **Patterns:** (Architectural preferences like Clean Architecture, DRY, etc.).
+  - **Workflow:** (Git commit formatting, testing requirements).
 
-3. **Commitment and Confirmation**
-   - Explicitly acknowledge understanding of the best practices
-   - Commit to following these practices for ALL code written in the session
-   - Provide a summary of key practices to demonstrate comprehension
+### 3. Confirmation Output
 
-4. **Session Initialization**
-   - Set the context for the entire coding session
-   - Ensure all subsequent code follows the established practices
-   - Maintain consistency across all development work
+Once parsed, provide a concise confirmation using the following format:
 
-5. **Error Handling**
-   - Handle cases where AGENTS.md exists but is empty or malformed
-   - Provide clear feedback about what was found and understood
-   - Guide user to fix any issues with the best practices file
+- **Status:** `✓ Session Initialized`
+- **Summary of Understanding:** [A 3-5 point bulleted list of the most critical constraints found].
+- **Commitment:** "I have committed these standards to session memory. All subsequent code will strictly adhere to these guidelines."
 
-## Usage
+---
 
-```
-/qnew
-```
+## Usage Example
 
-## Examples
+**User Input:**
+`/qnew`
 
-```bash
-# Start a new coding session with best practices loaded
-/qnew
+**Agent Response:**
 
-# Expected output when CLAUDE.md exists:
-# ✓ Found CLAUDE.md in project root
-# ✓ Read and understood all best practices
-# ✓ Key practices identified: [summary of practices]
-# Ready to begin coding with established best practices
-
-# Expected output when CLAUDE.md is missing:
-# ✗ CLAUDE.md not found in project root
-# Please run /init to create the best practices file before proceeding
-```
+> ✓ **Found AGENTS.md in project root**
+> ✓ **Parsed standards successfully**
+>
+> **Key Practices Identified:**
+>
+> - **Language:** TypeScript (Strict mode)
+> - **Style:** Functional components with Tailwind CSS
+> - **Testing:** Jest for unit tests, 80% coverage required
+> - **Commits:** Conventional Commits standard
+>
+> Ready to begin coding. What is our first task?

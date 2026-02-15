@@ -1,88 +1,78 @@
 ---
-description: Analyze codebase consistency and create an implementation plan that follows existing patterns
+command: /qplan
+description: Analyze codebase consistency and create a standard-compliant implementation plan.
 agent: plan
+phase: strategy
+args:
+  requirement:
+    type: string
+    description: The feature, bug fix, or refactoring task to plan.
+    required: true
 ---
 
-## Description
+# Command: /qplan
 
-This command analyzes the existing codebase to create implementation plan for user's requirement outlined below that maintain consistency, minimize changes, and maximize code reuse. It helps ensure new features or modifications align with established patterns and architecture while avoiding unnecessary duplication or architectural drift.
+## Context & Constraints
+
+You are a **Senior Software Architect**. Before generating a plan, you must reference the standards loaded from `AGENTS.md` (via `/qnew`). Your goal is to solve the user's requirement with the **least amount of architectural drift** possible.
 
 User's Requirement: $ARGUMENT
 
-This command will:
+## Execution Steps
 
-- Check for the existence of @AGENTS.md in the project root
-- Read and parse all best practices from the file
-- Scan the codebase for similar functionality and patterns
-- Evaluate consistency with existing architectural decisions
-- Identify opportunities for code reuse and component sharing
-- Generate a plan that introduces minimal disruptive changes
-- Provide specific recommendations for implementation approach
+### 1. Discovery & Alignment
 
-## Implementation
+- **Best Practices Check:** Retrieve the session's active coding standards.
+- **Pattern Matching:** Scan the existing codebase for similar logic (e.g., if the user asks for a new API endpoint, find the existing `/controllers` or `/routes` pattern).
+- **Dependency Mapping:** Identify existing utilities, types, or components that can be reused to avoid "reinventing the wheel."
 
-The command should:
+### 2. Strategy Formulation
 
-1. **Codebase Analysis**
-   - Scan relevant directories and files for similar functionality
-   - Identify existing patterns, components, and architectural decisions
-   - Map out current code structure and dependencies
-   - Analyze naming conventions, file organization, and coding patterns
+- **Minimalism First:** Prioritize extending existing code over creating new files.
+- **Consistency Check:** Ensure naming conventions and file structures match the current project state.
+- **Code Reuse Identification:** Find existing components, utilities, and patterns that can be leveraged.
+- **Suggestions:** Suggest testing strategies that align with existing test patterns and Recommend documentation updates following project conventions
 
-2. **Consistency Evaluation**
-   - Compare proposed changes against existing codebase patterns
-   - Check for alignment with current architectural decisions
-   - Identify potential conflicts with established conventions
-   - Ensure naming and structure follow project standards
+### 3. Evaluate the Strategy
 
-3. **Minimal Changes Assessment**
-   - Determine the smallest set of changes needed
-   - Identify which existing files need modification vs new files needed
-   - Prioritize extending existing functionality over creating new components
-   - Minimize impact on existing APIs and interfaces
+- **Compare with existing patterns and architecture:** Compare proposed changes against existing codebase patterns and Check for alignment with current architectural decisions
+- **Confict identification:** Identify potential conflicts in the plan with established conventions such as naming conventions, file organization, and coding patterns
 
-4. **Code Reuse Identification**
-   - Find existing components, utilities, and patterns that can be leveraged
-   - Identify shared functionality that shouldn't be duplicated
-   - Recommend existing abstractions and interfaces to build upon
-   - Suggest refactoring opportunities if beneficial
+### 3. Output Requirements
 
-5. **Plan Generation**
-   - Create a step-by-step implementation plan
-   - Specify which files to modify, create, or refactor
-   - Include consistency rationale for each decision
-   - Provide code reuse recommendations with specific examples
-   - Estimate the scope of changes (files affected, lines of code, etc.)
+Provide the response in two distinct phases:
 
-6. **Validation and Recommendations**
-   - Verify the plan maintains backward compatibility
-   - Suggest testing strategies that align with existing test patterns
-   - Recommend documentation updates following project conventions
-   - Identify potential risks or dependencies that need consideration
+#### Phase A: High-Level Summary
 
-## Usage
+- **Objective:** Clear statement of what will be achieved.
+- **Impact Score:** Estimate change volume (e.g., "Low impact: 2 files modified, 1 utility created").
+- **Consistency Note:** How this follows the project's specific `AGENTS.md` rules.
+- **Reuse Wins:** List specific existing functions/classes that will be recycled.
 
-```
-/qplan [feature or task description]
-```
+#### Phase B: Interactive Options
 
-## Examples
+End the response with these exact options for the user:
 
-```bash
-# Plan a new feature implementation
-/qplan Add user authentication to the dashboard
+1.  **"Show Detailed Plan"** (Breakdown of file-by-file changes and logic).
+2.  **"Proceed with Implementation"** (Start coding immediately).
+3.  **"Adjust Strategy"** (User provides feedback to refine the plan).
 
-# Plan a refactoring task
-/qplan Refactor the payment processing module
+---
 
-# Plan a bug fix
-/qplan Fix memory leak in data processing pipeline
+## Usage Example
 
-# Expected output:
-# 🔍 Analyzing similar codebase patterns...
-# 📋 Implementation Plan:
-# ✓ Consistency Check: Follows existing auth patterns in /auth module
-# ✓ Minimal Changes: Reuses 3 existing components, adds 2 new files
-# ✓ Code Reuse: Leverages AuthProvider, validates with existing schemas
-# 📝 Detailed Plan: [step-by-step implementation]
-```
+**User Input:**
+`/qplan Add a logout button to the navigation bar`
+
+**Agent Response:**
+
+> 🔍 **Analyzing codebase patterns...**
+> 📋 **High-Level Implementation Plan:**
+>
+> - **Strategy:** Extend the existing `Header.tsx` component to include a `LogoutButton` atom.
+> - **Consistency:** Will use the `useAuth` hook found in `src/hooks`, following the project's "Composition over Inheritance" rule.
+> - **Reuse:** Leverages the existing `Button` UI component and `toast` notification system.
+> - **Impact:** Small (2 files modified).
+>
+> **How would you like to proceed?**
+> [View Detailed Plan] | [Proceed with Implementation] | [Adjust Strategy]
