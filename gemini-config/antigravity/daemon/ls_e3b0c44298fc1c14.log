@@ -1,0 +1,13 @@
+I0227 21:02:16.867060 37379 server.go:1130] Starting language server process with pid 37379
+I0227 21:02:16.867173 37379 server.go:265] Setting GOMAXPROCS to 4
+I0227 21:02:16.867972 37379 server.go:453] Language server will attempt to listen on host 127.0.0.1
+I0227 21:02:16.868071 37379 server.go:468] Language server listening on random port at 52228 for HTTPS
+I0227 21:02:16.868100 37379 server.go:475] Language server listening on random port at 52229 for HTTP
+I0227 21:02:17.322776 37379 reconnectable_client.go:151] Connecting to extension server at port 52221
+I0227 21:02:17.323100 37379 server.go:442] Created reconnectable extension server client at port 52221
+I0227 21:02:17.324354 37379 server.go:584] Using ApiServerClientV2
+W0227 21:02:17.325440 37379 launchmanager.go:78] Entering local chrome mode! This is WRONG unless you are running tests or in eval mode on Linux.
+I0227 21:02:17.356133 37379 server.go:1564] Wrote discovery file: /Users/madushan/.gemini/antigravity/daemon/ls_e3b0c44298fc1c14.json
+I0227 21:02:17.356177 37379 server.go:1488] initialized server successfully in 488.998375ms
+2026/02/27 21:02:17 http: TLS handshake error from 127.0.0.1:52255: EOF
+E0227 21:02:17.445561 37379 interceptor.go:74] /exa.language_server_pb.LanguageServerService/RefreshMcpServers (unknown): loading already in progress

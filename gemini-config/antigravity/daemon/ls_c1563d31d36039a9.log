@@ -1,0 +1,290 @@
+I0227 15:00:44.734505 26181 server.go:1130] Starting language server process with pid 26181
+I0227 15:00:44.734712 26181 server.go:265] Setting GOMAXPROCS to 4
+I0227 15:00:44.735711 26181 server.go:453] Language server will attempt to listen on host 127.0.0.1
+I0227 15:00:44.735892 26181 server.go:468] Language server listening on random port at 63427 for HTTPS
+I0227 15:00:44.735914 26181 server.go:475] Language server listening on random port at 63428 for HTTP
+I0227 15:00:46.037026 26181 reconnectable_client.go:151] Connecting to extension server at port 63403
+I0227 15:00:46.037594 26181 server.go:442] Created reconnectable extension server client at port 63403
+I0227 15:00:46.039806 26181 server.go:584] Using ApiServerClientV2
+W0227 15:00:46.041439 26181 launchmanager.go:78] Entering local chrome mode! This is WRONG unless you are running tests or in eval mode on Linux.
+I0227 15:00:46.057921 26181 server.go:1564] Wrote discovery file: /Users/madushan/.gemini/antigravity/daemon/ls_c1563d31d36039a9.json
+I0227 15:00:46.057945 26181 server.go:1488] initialized server successfully in 1.323251625s
+E0227 15:00:46.114418 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/RefreshMcpServers (unknown): loading already in progress
+2026/02/27 15:00:46 http: TLS handshake error from 127.0.0.1:63475: EOF
+I0227 15:00:55.428309 26181 http_helpers.go:123] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xf9b5cef15e821bc7
+I0227 15:32:39.500316 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 15:32:42.028934 26181 http_helpers.go:123] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xca998c16bbf813b6
+I0227 15:32:47.803873 26181 http_helpers.go:123] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x54dc8e525a8a3897
+I0227 15:41:08.718005 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 15:41:10.909073 26181 http_helpers.go:123] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xcb1c7cffd27668c2
+I0227 15:41:12.454418 26181 http_helpers.go:123] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x3bd1c55fae6f376c
+I0227 15:41:13.478851 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 15:41:14.467401 26181 http_helpers.go:123] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x312593c3a0018844
+I0227 15:41:20.464152 26181 http_helpers.go:123] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x8688d351ab15d5e6
+I0227 16:04:30.990724 26181 http_helpers.go:123] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0xe186c9fb568ecdef
+I0227 16:23:00.046197 26181 http_helpers.go:123] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x48257b85c58dd8aa
+E0227 16:37:43.184627 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:38:43.187553 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:39:43.188564 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:40:43.187001 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:41:43.187668 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:42:43.187124 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:43:43.187410 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:44:43.189750 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:45:43.192261 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:46:43.193289 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:47:43.192777 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:48:43.191720 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:49:43.191842 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:50:42.921205 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:50:42.921205 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:50:43.193967 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:51:43.200622 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:52:43.198015 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:53:43.199025 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:54:43.199030 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:55:43.201354 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:56:43.204211 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:57:43.205052 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:58:43.208644 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 16:59:43.212411 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:00:43.214573 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:01:43.216796 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:02:43.226492 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:03:43.232841 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:04:43.231653 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:05:43.239630 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:06:43.250444 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:07:43.249641 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:08:43.257882 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:09:43.265413 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:10:43.267890 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:11:43.273082 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:12:43.275634 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:13:43.277373 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:14:43.278869 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:15:43.284657 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:16:43.289141 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:17:43.288354 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:18:43.292942 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:19:43.295092 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:20:43.297086 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:21:43.300521 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:22:43.303823 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:23:43.304519 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:24:43.302830 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:25:43.308749 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:26:43.307797 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:27:43.307936 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:28:43.312337 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:29:43.322160 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:30:43.322082 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:31:43.328484 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:32:43.328258 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:33:43.324853 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:34:43.329553 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:35:43.337037 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:36:43.340407 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:37:43.339561 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:38:43.342953 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:39:43.349139 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:40:43.356786 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:41:43.356138 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:42:43.359188 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:43:43.358455 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:44:43.363895 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:45:43.363413 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:45:43.879849 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:45:43.879861 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:46:43.365208 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:47:43.372243 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:48:43.378293 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:49:43.375606 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:50:43.382429 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:51:43.385663 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:52:43.391286 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:53:43.393343 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:54:43.398327 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:55:43.402279 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:56:43.403305 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:57:43.405000 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:58:43.408409 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 17:59:43.407086 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:00:43.415218 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:01:43.416165 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:02:43.420018 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:03:43.422861 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:04:43.420252 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:05:43.425048 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:06:43.428564 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:07:43.430896 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:08:43.434468 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:09:43.431019 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:10:43.438831 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:11:43.442605 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:12:43.443887 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:13:43.453386 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:14:43.459202 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:15:43.460183 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:16:43.466612 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:17:43.476583 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:18:43.479105 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:19:43.483881 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:20:43.484318 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:21:43.488845 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:22:43.489949 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:23:43.487969 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:24:43.490064 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:25:43.491555 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:26:43.494073 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:27:43.499548 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:28:43.503756 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:29:43.509601 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:30:43.510659 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:31:43.509037 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:32:43.514652 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:33:43.517738 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:34:43.520384 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:35:43.526021 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:36:43.526786 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:37:43.530756 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:38:43.536504 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:39:43.535218 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:40:43.538123 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:41:43.537724 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:42:43.539583 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:43:43.545556 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:44:43.549952 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:45:40.309696 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:45:40.310212 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:45:42.208289 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:45:42.208279 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:45:43.554459 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:46:43.562581 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:47:43.562604 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:48:43.566434 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:49:43.565709 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:50:43.566195 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:51:43.571641 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:52:43.570612 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:53:43.573233 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:54:43.577093 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:55:43.577033 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:56:43.582221 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:57:43.580459 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:58:43.583549 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 18:59:43.593413 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:00:43.600077 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:01:43.606128 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:02:43.608489 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:03:43.608111 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:04:43.607293 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:05:43.610762 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:06:43.618087 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:07:43.617412 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:08:43.625390 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:09:43.633256 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:10:43.636702 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:11:43.635953 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:12:43.648141 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:13:43.655512 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:14:43.652702 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:15:43.659642 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:16:43.664295 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:17:43.663996 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:18:43.670411 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:19:43.673202 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:20:43.681579 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:21:43.690212 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:22:43.696199 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:23:43.691058 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:24:43.698115 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:25:43.708572 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:26:43.715775 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:27:43.725431 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:28:43.732898 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:29:43.736463 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:30:43.745252 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:31:43.747724 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:32:43.753677 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:33:43.760444 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:34:43.757110 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:35:43.760852 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:36:43.762128 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:37:43.763271 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:38:43.765059 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:39:43.773088 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:40:43.122465 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:40:43.123913 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:40:43.773277 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:41:43.775796 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:42:43.780548 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:43:43.778617 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:44:43.787502 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:45:43.789890 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:46:43.791441 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:47:43.791814 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:48:43.794647 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:49:43.799850 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:50:43.804856 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:51:43.805849 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:52:43.814351 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:53:43.813814 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:54:43.815997 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:55:43.822233 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:56:43.822869 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:57:43.825427 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:58:43.828754 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 19:59:43.832751 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:00:43.833391 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:01:43.840805 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:02:43.876398 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:03:43.893668 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:04:43.896704 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:05:43.896837 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:06:43.904661 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:07:43.909926 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:08:43.909160 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:09:43.916549 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:10:43.921867 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:11:43.917325 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:12:43.922819 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:13:43.923171 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:14:43.928692 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:15:43.936617 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:16:43.939381 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:17:43.950984 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:18:43.960797 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:19:43.966909 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:20:43.969072 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:21:43.969780 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:22:43.970829 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:23:43.973376 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:24:43.978722 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:25:43.980947 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:26:43.980443 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:27:43.983195 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:28:43.986747 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:29:43.991670 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:30:43.997477 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+E0227 20:31:43.995338 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+I0227 20:32:18.499289 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:18.499593 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:19.043245 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:20.790780 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:21.059396 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:22.338331 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:23.528791 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:24.376995 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:24.377184 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:24.402058 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:28.691620 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:29.869281 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:30.698956 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:31.132211 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:33.793570 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+I0227 20:32:36.760791 26181 client.go:56] CEL: Sending error - type=LS_ERROR ideName=antigravity appName=antigravity_desktop version=1.19.4
+E0227 20:32:43.992899 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+I0227 20:32:51.064167 26181 http_helpers.go:123] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x71a1c6e77fae3fa8
+E0227 20:33:43.999662 26181 interceptor.go:74] /exa.language_server_pb.LanguageServerService/SendActionToChatPanel (unknown): can't send message because channel is full
+I0227 20:34:38.254691 26181 client.go:416] UnifiedStateSyncClient disconnected.
