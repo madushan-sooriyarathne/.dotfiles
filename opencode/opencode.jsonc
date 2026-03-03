@@ -35,6 +35,8 @@
       "git status *": "allow",
       "git diff *": "allow",
       "git log *": "allow",
+      "git branch *": "allow",
+      "git checkout *": "allow",
       "rm *": "ask",
       "pnpm *": "ask",
       "pnpm dev": "allow",
