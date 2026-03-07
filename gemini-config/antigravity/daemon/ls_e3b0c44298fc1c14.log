@@ -1,13 +1,104 @@
-I0227 21:02:16.867060 37379 server.go:1130] Starting language server process with pid 37379
-I0227 21:02:16.867173 37379 server.go:265] Setting GOMAXPROCS to 4
-I0227 21:02:16.867972 37379 server.go:453] Language server will attempt to listen on host 127.0.0.1
-I0227 21:02:16.868071 37379 server.go:468] Language server listening on random port at 52228 for HTTPS
-I0227 21:02:16.868100 37379 server.go:475] Language server listening on random port at 52229 for HTTP
-I0227 21:02:17.322776 37379 reconnectable_client.go:151] Connecting to extension server at port 52221
-I0227 21:02:17.323100 37379 server.go:442] Created reconnectable extension server client at port 52221
-I0227 21:02:17.324354 37379 server.go:584] Using ApiServerClientV2
-W0227 21:02:17.325440 37379 launchmanager.go:78] Entering local chrome mode! This is WRONG unless you are running tests or in eval mode on Linux.
-I0227 21:02:17.356133 37379 server.go:1564] Wrote discovery file: /Users/madushan/.gemini/antigravity/daemon/ls_e3b0c44298fc1c14.json
-I0227 21:02:17.356177 37379 server.go:1488] initialized server successfully in 488.998375ms
-2026/02/27 21:02:17 http: TLS handshake error from 127.0.0.1:52255: EOF
-E0227 21:02:17.445561 37379 interceptor.go:74] /exa.language_server_pb.LanguageServerService/RefreshMcpServers (unknown): loading already in progress
+I0304 04:40:01.683966 99940 server.go:1130] Starting language server process with pid 99940
+I0304 04:40:01.684153 99940 server.go:265] Setting GOMAXPROCS to 4
+I0304 04:40:01.685054 99940 server.go:453] Language server will attempt to listen on host 127.0.0.1
+I0304 04:40:01.685239 99940 server.go:468] Language server listening on random port at 56743 for HTTPS
+I0304 04:40:01.685264 99940 server.go:475] Language server listening on random port at 56744 for HTTP
+I0304 04:40:02.451162 99940 reconnectable_client.go:151] Connecting to extension server at port 56706
+I0304 04:40:02.451747 99940 server.go:442] Created reconnectable extension server client at port 56706
+I0304 04:40:02.454052 99940 server.go:584] Using ApiServerClientV2
+W0304 04:40:02.456278 99940 launchmanager.go:78] Entering local chrome mode! This is WRONG unless you are running tests or in eval mode on Linux.
+E0304 04:40:02.470931 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused.
+E0304 04:40:02.472269 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused.
+W0304 04:40:02.472603 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused
+W0304 04:40:02.472713 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused
+E0304 04:40:02.476245 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused.
+E0304 04:40:02.482222 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused.
+W0304 04:40:02.482302 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused
+W0304 04:40:02.483150 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused
+E0304 04:40:02.483664 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused.
+E0304 04:40:02.484815 99940 server.go:550] Failed to get OAuth token: error getting token source from auth provider: state syncing error: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused
+W0304 04:40:02.485163 99940 client.go:167] failed to set auth token
+I0304 04:40:02.483939 99940 server.go:1564] Wrote discovery file: /Users/madushan/.gemini/antigravity/daemon/ls_e3b0c44298fc1c14.json
+I0304 04:40:02.488591 99940 server.go:1488] initialized server successfully in 804.455083ms
+E0304 04:40:02.490413 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused.
+W0304 04:40:02.490632 99940 log_context.go:115] Cache(userInfo): Singleflight refresh failed: error getting token source: state syncing error: unavailable: dial tcp 127.0.0.1:56706: connect: connection refused
+I0304 04:40:03.452721 99940 reconnectable_client.go:214] Disconnecting from extension server
+E0304 04:40:03.452828 99940 client.go:264] Failed to push update for topic trajectorySummaries, key 74ed7cec-31f3-4a83-b5df-0b3a9b3389f7: extension server client is disconnected.
+E0304 04:40:03.452861 99940 client.go:264] Failed to push update for topic trajectorySummaries, key 3900466b-b911-48fd-bb50-7b854d3ffc57: extension server client is disconnected.
+E0304 04:40:03.452879 99940 client.go:264] Failed to push update for topic trajectorySummaries, key 0b002142-4258-4db8-9250-f46376b348c8: extension server client is disconnected.
+E0304 04:40:03.452921 99940 client.go:264] Failed to push update for topic trajectorySummaries, key d0743f1e-b1e7-4340-82d8-3271609a92a3: extension server client is disconnected.
+E0304 04:40:03.452937 99940 client.go:264] Failed to push update for topic trajectorySummaries, key 3d1f62e1-86f2-40cd-abc3-882846ffe421: extension server client is disconnected.
+E0304 04:40:03.452950 99940 client.go:264] Failed to push update for topic trajectorySummaries, key 6213707f-a8c2-4264-8bdd-b04d97db9c17: extension server client is disconnected.
+E0304 04:40:03.452960 99940 client.go:264] Failed to push update for topic trajectorySummaries, key fd3dccb7-bc22-4684-aad4-48076c898f89: extension server client is disconnected.
+E0304 04:40:03.452972 99940 client.go:264] Failed to push update for topic trajectorySummaries, key 9473b3b4-537a-403b-bf81-5c0460ec42f6: extension server client is disconnected.
+E0304 04:40:03.452982 99940 client.go:264] Failed to push update for topic trajectorySummaries, key 38249873-22b5-46ea-a920-286fa9d99718: extension server client is disconnected.
+E0304 04:40:03.452993 99940 client.go:264] Failed to push update for topic trajectorySummaries, key cbd0e7d9-64c3-4ff2-8421-a6edae58cbf7: extension server client is disconnected.
+E0304 04:40:04.339944 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: extension server client is disconnected.
+E0304 04:40:04.339984 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+E0304 04:40:04.340014 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+E0304 04:40:04.340043 99940 server.go:550] Failed to get OAuth token: error getting token source from auth provider: state syncing error: extension server client is disconnected
+W0304 04:40:04.340072 99940 client.go:167] failed to set auth token
+E0304 04:40:04.340106 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:04.340137 99940 log_context.go:115] Cache(userInfo): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:04.340053 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:04.340159 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:04.340174 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: extension server client is disconnected.
+E0304 04:40:04.340192 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:04.340245 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:04.340299 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:20.863024 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: extension server client is disconnected.
+E0304 04:40:20.863354 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+E0304 04:40:20.863704 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+E0304 04:40:20.863513 99940 server.go:550] Failed to get OAuth token: error getting token source from auth provider: state syncing error: extension server client is disconnected
+W0304 04:40:20.863954 99940 client.go:167] failed to set auth token
+W0304 04:40:20.863953 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:20.864086 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:20.864153 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: extension server client is disconnected.
+E0304 04:40:20.864198 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:20.864242 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:20.864277 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:20.864322 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:20.864471 99940 log_context.go:115] Cache(userInfo): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:22.992317 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: extension server client is disconnected.
+E0304 04:40:22.992384 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:22.992438 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:22.992468 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:22.992487 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: extension server client is disconnected.
+E0304 04:40:22.992525 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+E0304 04:40:22.992629 99940 server.go:550] Failed to get OAuth token: error getting token source from auth provider: state syncing error: extension server client is disconnected
+W0304 04:40:22.992753 99940 client.go:167] failed to set auth token
+E0304 04:40:22.992841 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:22.992923 99940 log_context.go:115] Cache(userInfo): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:22.993009 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:22.993363 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:25.393082 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: extension server client is disconnected.
+E0304 04:40:25.393289 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+E0304 04:40:25.393340 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:25.393433 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:25.393423 99940 server.go:550] Failed to get OAuth token: error getting token source from auth provider: state syncing error: extension server client is disconnected
+W0304 04:40:25.393516 99940 client.go:167] failed to set auth token
+E0304 04:40:25.393706 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:25.394004 99940 log_context.go:115] Cache(userInfo): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:25.394183 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:25.394282 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: extension server client is disconnected.
+E0304 04:40:25.394326 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:25.394438 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:25.394502 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:27.249916 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+E0304 04:40:27.250348 99940 server.go:550] Failed to get OAuth token: error getting token source from auth provider: state syncing error: extension server client is disconnected
+W0304 04:40:27.250421 99940 client.go:167] failed to set auth token
+E0304 04:40:27.250467 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:27.250512 99940 log_context.go:115] Cache(userInfo): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:27.250532 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: extension server client is disconnected.
+E0304 04:40:27.250556 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:27.250583 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:27.250600 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:27.250624 99940 client.go:337] Unexpected state sync subscription error for topic uss-enterprisePreferences: extension server client is disconnected.
+E0304 04:40:27.250643 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:27.250659 99940 log_context.go:115] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected
+W0304 04:40:27.250670 99940 log_context.go:115] Cache(fetchAdminControls): Singleflight refresh failed: failed to get load code assist response: error getting token source: state syncing error: extension server client is disconnected
+E0304 04:40:33.878314 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+E0304 04:40:33.878503 99940 server.go:550] Failed to get OAuth token: error getting token source from auth provider: state syncing error: extension server client is disconnected
+W0304 04:40:33.878614 99940 client.go:167] failed to set auth token
+E0304 04:40:33.878716 99940 client.go:337] Unexpected state sync subscription error for topic uss-oauth: extension server client is disconnected.
+W0304 04:40:33.878804 99940 log_context.go:115] Cache(userInfo): Singleflight refresh failed: error getting token source: state syncing error: extension server client is disconnected

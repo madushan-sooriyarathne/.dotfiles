@@ -31,6 +31,5 @@
   "enabledPlugins": {
     "example-skills@anthropic-agent-skills": true
   },
-  "alwaysThinkingEnabled": true,
-  "model": "sonnet"
+  "alwaysThinkingEnabled": true
 }
