@@ -33,6 +33,7 @@ gemini-config/antigravity/context_state
 gemini-config/antigravity/conversations
 gemini-config/antigravity/implicit
 gemini-config/antigravity/knowledge
+gemini-config/antigravity/daemon
 gemini-config/antigravity/playground
 gemini-config/antigravity/installation_id
 gemini-config/antigravity/mcp_config.json
