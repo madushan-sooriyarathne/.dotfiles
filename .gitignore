@@ -1,3 +1,4 @@
+claude-config/backups/
 claude-config/projects
 claude-config/cache
 claude-config/paste-cache
@@ -41,3 +42,4 @@ gemini-config/antigravity/onboarding.json
 gemini-config/antigravity/onboarding.json.lock
 gemini-config/antigravity/user_settings.pb
 
+zed-config/prompts/*

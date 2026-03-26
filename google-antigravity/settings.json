@@ -150,4 +150,5 @@
   "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app",
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "security.workspace.trust.enabled": false,
+  "remote.autoForwardPortsSource": "hybrid",
 }
