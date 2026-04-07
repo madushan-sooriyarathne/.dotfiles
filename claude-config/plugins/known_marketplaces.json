@@ -5,7 +5,7 @@
       "repo": "anthropics/skills"
     },
     "installLocation": "/Users/madushan/.claude/plugins/marketplaces/anthropic-agent-skills",
-    "lastUpdated": "2025-11-28T06:09:37.288Z"
+    "lastUpdated": "2026-04-04T07:47:04.236Z"
   },
   "claude-plugins-official": {
     "source": {
@@ -13,6 +13,10 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/madushan/.claude/plugins/marketplaces/claude-plugins-official",
+<<<<<<< Updated upstream
     "lastUpdated": "2026-03-31T20:48:58.700Z"
+=======
+    "lastUpdated": "2026-04-06T21:43:32.521Z"
+>>>>>>> Stashed changes
   }
 }
