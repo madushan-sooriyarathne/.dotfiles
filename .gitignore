@@ -15,6 +15,8 @@ claude-config/ide
 claude-config/debug/
 claude-config/file-history/
 claude-config/history.jsonl
+claude-config/plugins/
+claude-config/sessions/
 
 **/.DS_Store
 
