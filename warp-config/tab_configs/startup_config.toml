@@ -1,0 +1,8 @@
+name = "New tab: rapid-adventures-new"
+
+[[panes]]
+id = "main"
+type = "terminal"
+directory = "/Users/madushan/Developer/rapid-adventures-new"
+
+[params]
