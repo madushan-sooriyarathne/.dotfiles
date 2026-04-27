@@ -2,29 +2,6 @@
 
 Initialize a new coding session with best practices from CLAUDE.md
 
-## Usage
-
-```
-/qnew
-```
-
-## Examples
-
-```bash
-# Start a new coding session with best practices loaded
-/qnew
-
-# Expected output when CLAUDE.md exists:
-# ✓ Found CLAUDE.md in project root
-# ✓ Read and understood all best practices
-# ✓ Key practices identified: [summary of practices]
-# Ready to begin coding with established best practices
-
-# Expected output when CLAUDE.md is missing:
-# ✗ CLAUDE.md not found in project root
-# Please run /init to create the best practices file before proceeding
-```
-
 ## Description
 
 This command ensures that Claude Code reads and commits to following all coding best practices defined in the project's CLAUDE.md file before beginning any coding work. It acts as a quality gate to maintain consistent code standards across the entire development session.
@@ -65,3 +42,26 @@ The command should:
    - Handle cases where CLAUDE.md exists but is empty or malformed
    - Provide clear feedback about what was found and understood
    - Guide user to fix any issues with the best practices file
+
+## Usage
+
+```
+/qnew
+```
+
+## Examples
+
+```bash
+# Start a new coding session with best practices loaded
+/qnew
+
+# Expected output when CLAUDE.md exists:
+# ✓ Found CLAUDE.md in project root
+# ✓ Read and understood all best practices
+# ✓ Key practices identified: [summary of practices]
+# Ready to begin coding with established best practices
+
+# Expected output when CLAUDE.md is missing:
+# ✗ CLAUDE.md not found in project root
+# Please run /init to create the best practices file before proceeding
+```
