@@ -2,48 +2,6 @@
 
 Perform skeptical test-specific code review against Writing Tests Best Practices
 
-## Usage
-
-```
-/qcheck_tests
-```
-
-## Examples
-
-```bash
-# Review all major test changes made in the session
-/qcheck_tests
-
-# Expected output when checklist is available:
-# 🔍 SKEPTICAL TEST REVIEW - Senior Engineer Analysis
-#
-# 📋 Analyzing MAJOR test changes only (skipping minor tweaks)...
-#
-# 🧪 Test Suite: `user-service.test.js`
-# ✓ Writing Tests Best Practices (CLAUDE.md):
-#   ✓ Test names clearly describe what is being tested
-#   ✓ Tests are properly isolated and independent
-#   ⚠️ Missing edge case tests for null/undefined user inputs
-#   ✗ Test `should handle user creation` is testing multiple behaviors
-#   ✓ Proper setup and teardown implemented
-#   ⚠️ Mock data is hardcoded - consider using test fixtures
-#
-# 🧪 Test: `it('should validate email format correctly')`
-# ✓ Writing Tests Best Practices (CLAUDE.md):
-#   ✓ Test name is descriptive and specific
-#   ✓ Single assertion per test maintained
-#   ✓ Tests both valid and invalid email scenarios
-#   ✓ No external dependencies or side effects
-#   ⚠️ Could benefit from more boundary condition testing
-#   ✓ Clear arrange-act-assert structure
-
-# Expected output when checklist is missing:
-# ❌ Missing checklist: "Writing Tests Best Practices" not found in CLAUDE.md
-#
-# 🤔 Should I add a "Writing Tests Best Practices" checklist to CLAUDE.md
-#    based on this project's testing framework and patterns? (y/n)
-```
-
 ## Description
 
 This command performs a focused, skeptical code review specifically for test-related changes made during the session. Acting as a senior software engineer, it validates all major test additions and modifications against the "Writing Tests Best Practices" checklist from CLAUDE.md, providing detailed feedback on test design, coverage, and quality.
@@ -121,7 +79,7 @@ The command should:
    - Review mock usage and test doubles appropriateness
 
 10. **Summary and Recommendations**
-    - Provide an overall assessment of test suite quality
+    - Provide an summerized overall assessment of test suite quality (use caveman skill for compressed output that uses less output tokens)
     - Highlight patterns of issues across multiple tests
     - Suggest broader testing improvements or refactoring opportunities
     - Recommend next steps for addressing identified testing gaps

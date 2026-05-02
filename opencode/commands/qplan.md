@@ -22,6 +22,7 @@ User's Requirement: $ARGUMENT
 
 ### 1. Discovery & Alignment
 
+- **Understand Project Graph:** Read graphify-out/GRAPH_REPORT.md (if exists) for god nodes and community structure of the project before searching raw files.
 - **Best Practices Check:** Retrieve the session's active coding standards.
 - **Pattern Matching:** Scan the existing codebase for similar logic (e.g., if the user asks for a new API endpoint, find the existing `/controllers` or `/routes` pattern).
 - **Dependency Mapping:** Identify existing utilities, types, or components that can be reused to avoid "reinventing the wheel."
@@ -40,7 +41,7 @@ User's Requirement: $ARGUMENT
 
 ### 3. Output Requirements
 
-Provide the response in two distinct phases:
+Provide a summerized response in two distinct phases using previously loaded caveman skill:
 
 #### Phase A: High-Level Summary
 
@@ -56,23 +57,3 @@ End the response with these exact options for the user:
 1.  **"Show Detailed Plan"** (Breakdown of file-by-file changes and logic).
 2.  **"Proceed with Implementation"** (Start coding immediately).
 3.  **"Adjust Strategy"** (User provides feedback to refine the plan).
-
----
-
-## Usage Example
-
-**User Input:**
-`/qplan Add a logout button to the navigation bar`
-
-**Agent Response:**
-
-> 🔍 **Analyzing codebase patterns...**
-> 📋 **High-Level Implementation Plan:**
->
-> - **Strategy:** Extend the existing `Header.tsx` component to include a `LogoutButton` atom.
-> - **Consistency:** Will use the `useAuth` hook found in `src/hooks`, following the project's "Composition over Inheritance" rule.
-> - **Reuse:** Leverages the existing `Button` UI component and `toast` notification system.
-> - **Impact:** Small (2 files modified).
->
-> **How would you like to proceed?**
-> [View Detailed Plan] | [Proceed with Implementation] | [Adjust Strategy]

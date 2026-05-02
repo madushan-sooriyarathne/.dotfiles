@@ -2,46 +2,6 @@
 
 Generate a comprehensive conversation summary with technical details and context
 
-## Usage
-
-```
-/qsum
-```
-
-## Examples
-
-```bash
-# Generate a detailed summary of the current conversation
-/qsum
-
-# Expected output:
-# <analysis>
-# Reviewing the conversation chronologically:
-# 1. User requested custom Claude Code commands for quality control
-# 2. I created /qnew command for loading best practices
-# 3. User then asked for /qplan for codebase consistency analysis
-# [... detailed analysis continues ...]
-# </analysis>
-#
-# <summary>
-# 1. Primary Request and Intent:
-#    User wanted to create a comprehensive set of custom Claude Code commands
-#    for enforcing development best practices and quality control...
-#
-# 2. Key Technical Concepts:
-#    - Claude Code custom commands and .claude/commands/ directory structure
-#    - CLAUDE.md best practices file integration
-#    - Conventional Commits specification
-# [... summary continues with all 7 sections ...]
-# </summary>
-#
-# 💾 Would you like me to:
-# 1. Save this summary to claude-summary.md in the project root
-# 2. Copy the summary to your system clipboard
-# 3. Both save and copy
-# 4. Neither (just display here)
-```
-
 ## Description
 
 This command creates a comprehensive, technically detailed summary of the entire conversation, capturing all user requests, technical decisions, code patterns, and architectural choices. It provides the essential context needed to continue development work without losing important details, organized in a structured format that preserves chronological development and technical accuracy.

@@ -2,46 +2,6 @@
 
 Perform skeptical code review against CLAUDE.md best practices checklists
 
-## Usage
-
-```
-/qcheck
-```
-
-## Examples
-
-```bash
-# Review all major code changes made in the session
-/qcheck
-
-# Expected output when all checklists are available:
-# 🔍 SKEPTICAL CODE REVIEW - Senior Engineer Analysis
-#
-# 📋 Analyzing MAJOR changes only (skipping minor tweaks)...
-#
-# ✓ Writing Functions Best Practices (CLAUDE.md):
-#   ✓ Function names are descriptive and follow naming conventions
-#   ⚠️ Function `processData` is doing too many things - consider splitting
-#   ✓ Parameters are properly typed and validated
-#
-# ✓ Writing Tests Best Practices (CLAUDE.md):
-#   ✓ Test coverage for happy path scenarios
-#   ✗ Missing edge case tests for null/undefined inputs
-#   ✓ Test names clearly describe what is being tested
-#
-# ✓ Implementation Best Practices (CLAUDE.md):
-#   ✓ Error handling follows project patterns
-#   ⚠️ Consider extracting magic numbers to constants
-#   ✓ Code follows existing architectural patterns
-
-# Expected output when checklists are missing:
-# ❌ Missing checklist: "Writing Functions Best Practices" not found in CLAUDE.md
-# ❌ Missing checklist: "Writing Tests Best Practices" not found in CLAUDE.md
-# ✓ Found checklist: "Implementation Best Practices"
-#
-# 🤔 Should I add the missing best practices checklists to CLAUDE.md based on this project's nature and scope? (y/n)
-```
-
 ## Description
 
 This command performs a thorough, skeptical code review of all major code changes introduced during the session. Acting as a senior software engineer, it validates changes against three critical best practices checklists from CLAUDE.md, focusing only on substantial modifications while ignoring minor tweaks.

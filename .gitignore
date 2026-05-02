@@ -19,7 +19,7 @@ claude-config/plugins/
 claude-config/sessions/
 
 **/.DS_Store
-
+**/.claude
 
 gemini-config/tmp
 gemini-config/google_accounts.json
@@ -44,4 +44,4 @@ gemini-config/antigravity/onboarding.json
 gemini-config/antigravity/onboarding.json.lock
 gemini-config/antigravity/user_settings.pb
 
-zed-config/prompts/*
+wrap-config/typescript-language-server

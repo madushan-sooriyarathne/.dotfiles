@@ -8,6 +8,7 @@
     "octto",
     "@mohak34/opencode-notifier@latest",
     "@knikolov/opencode-plugin-simple-memory",
+    "@warp-dot-dev/opencode-warp"
   ],
   "instructions": [
     "~/.config/opencode/instructions/shell_strategy.md"

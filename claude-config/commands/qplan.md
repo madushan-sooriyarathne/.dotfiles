@@ -8,8 +8,7 @@ This command analyzes the existing codebase to create implementation plans that 
 
 This command will:
 
-- Check for the existence of CLAUDE.md in the project root
-- Read and parse all best practices from the file
+- Analyze user's task request
 - Check if graphify-out/GRAPH_REPORT.md file exists and if exists, Read graphify-out/GRAPH_REPORT.md for god nodes and community structure of the project before searching raw files.
 - Scan the codebase for similar functionality and patterns
 - Evaluate consistency with existing architectural decisions
@@ -52,36 +51,10 @@ The command should:
    - Include consistency rationale for each decision
    - Provide code reuse recommendations with specific examples
    - Estimate the scope of changes (files affected, lines of code, etc.)
+   - Provide a summerized and compressed plan to user (use prevously loaded caveman skill)
 
 6. **Validation and Recommendations**
    - Verify the plan maintains backward compatibility
    - Suggest testing strategies that align with existing test patterns
    - Recommend documentation updates following project conventions
    - Identify potential risks or dependencies that need consideration
-
-## Usage
-
-```
-/qplan [feature or task description]
-```
-
-## Examples
-
-```bash
-# Plan a new feature implementation
-/qplan Add user authentication to the dashboard
-
-# Plan a refactoring task
-/qplan Refactor the payment processing module
-
-# Plan a bug fix
-/qplan Fix memory leak in data processing pipeline
-
-# Expected output:
-# 🔍 Analyzing similar codebase patterns...
-# 📋 Implementation Plan:
-# ✓ Consistency Check: Follows existing auth patterns in /auth module
-# ✓ Minimal Changes: Reuses 3 existing components, adds 2 new files
-# ✓ Code Reuse: Leverages AuthProvider, validates with existing schemas
-# 📝 Detailed Plan: [step-by-step implementation]
-```

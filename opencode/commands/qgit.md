@@ -82,28 +82,3 @@ You are a **DevOps & Release Engineer**. Your priority is repository integrity. 
 `✅ COMMITTING AND PUSHING...`
 `Hash: [Hash]`
 `Remote: [URL/Branch]`
-
----
-
-## Usage Example
-
-**User Input:**
-`/qgit`
-
-**Agent Response:**
-
-> 🔍 **Analyzing changes...**
-> 📁 **Session Context:** Ongoing (focusing on session files)
-> 📁 **Staging:** `src/components/Button.tsx`, `src/hooks/useAuth.ts`
->
-> 🧪 **Running quality checks...**
-> ✅ Type check passed.
-> ✅ Lint passed.
-> ✅ Tests passed.
->
-> 📝 **Generated commit message:**
-> `feat(auth): integrate session-based logout logic`
->
-> ✅ **Committing and pushing...**
-> `[main a1b2c3d] feat(auth): integrate session-based logout logic`
-> `Pushed to origin/main`

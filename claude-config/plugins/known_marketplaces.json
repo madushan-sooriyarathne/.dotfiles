@@ -13,7 +13,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/madushan/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-04-27T06:24:14.654Z"
+    "lastUpdated": "2026-05-02T15:36:13.411Z"
   },
   "claude-code-warp": {
     "source": {
@@ -22,5 +22,13 @@
     },
     "installLocation": "/Users/madushan/.claude/plugins/marketplaces/claude-code-warp",
     "lastUpdated": "2026-04-23T18:05:13.093Z"
+  },
+  "caveman": {
+    "source": {
+      "source": "github",
+      "repo": "JuliusBrussee/caveman"
+    },
+    "installLocation": "/Users/madushan/.claude/plugins/marketplaces/caveman",
+    "lastUpdated": "2026-05-02T15:04:25.164Z"
   }
 }

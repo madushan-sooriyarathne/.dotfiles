@@ -52,9 +52,14 @@
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "bash \"/Users/madushan/.claude/hooks/caveman-statusline.sh\""
+  },
   "enabledPlugins": {
     "example-skills@anthropic-agent-skills": true,
-    "warp@claude-code-warp": true
+    "warp@claude-code-warp": true,
+    "caveman@caveman": true
   },
   "extraKnownMarketplaces": {
     "claude-code-warp": {
@@ -62,11 +67,13 @@
         "source": "github",
         "repo": "warpdotdev/claude-code-warp"
       }
+    },
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
     }
   },
-  "alwaysThinkingEnabled": true,
-  "statusLine": {
-    "type": "command",
-    "command": "bash \"/Users/madushan/.claude/hooks/caveman-statusline.sh\""
-  }
+  "alwaysThinkingEnabled": true
 }

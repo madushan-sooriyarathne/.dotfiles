@@ -42,6 +42,8 @@ Evaluate the major changes against the identified checklists using these criteri
 
 ## Output Format
 
+- _USE_ caveman skill for outputs
+
 ### Header
 
 `🔍 SKEPTICAL CODE REVIEW - Senior Engineer Analysis`
@@ -58,32 +60,3 @@ For each checklist category, use:
 ### Actionable Feedback
 
 List specific code blocks that require attention and provide a **"Refactoring Suggestion"** for each.
-
----
-
-## Usage Example
-
-**User Input:**
-`/qcheck`
-
-**Agent Response:**
-
-> 🔍 **SKEPTICAL CODE REVIEW - Senior Engineer Analysis**
->
-> 📋 **Analyzing MAJOR changes only...**
->
-> **✓ Writing Functions (AGENTS.md):**
->
-> - `⚠️` `calculateTotal()` in `cart.ts` is 60 lines. Recommend splitting into `applyDiscounts()` and `sumItems()`.
-> - `✓` Param types are strictly defined.
->
-> **✓ Writing Tests (AGENTS.md):**
->
-> - `✗` No tests found for the new `useAuth` error state.
-> - `✓` Happy path tests for login are robust.
->
-> **✓ Implementation (AGENTS.md):**
->
-> - `⚠️` Hardcoded API endpoint found in `services/api.ts`. Should use `process.env`.
->
-> **Next Step:** Would you like me to implement these fixes, or would you prefer to refactor them manually?

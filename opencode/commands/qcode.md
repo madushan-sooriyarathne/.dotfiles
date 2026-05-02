@@ -39,6 +39,7 @@ Execute these steps in strict order. If any step fails, you must attempt to fix 
 
 ### 3. Progress Reporting
 
+Use caveman skill for output
 You must provide a live-style log of your progress using these status indicators:
 
 - `⏳` Pending
@@ -61,31 +62,3 @@ You must provide a live-style log of your progress using these status indicators
 
 - **Summary:** List total files changed and test pass rate.
 - **Next Step:** Offer `/qgit` to commit the changes or `/qcheck` for a manual review.
-
----
-
-## Usage Example
-
-**User Input:**
-`/qcode make sure the button is blue`
-
-**Agent Response:**
-
-> ! **Plan Updated:** Integrating "Blue" primary color to the `LogoutButton` atom.
->
-> 🚀 **IMPLEMENTING SOLUTION**
->
-> 🔧 **Coding Phase:**
-> ✅ Created `src/components/LogoutButton.tsx`
-> ✅ Updated `src/styles/theme.ts`
->
-> 🧪 **Testing:**
-> ✅ New tests: 4/4 passing
-> ✅ Regressions: 112/112 passing
->
-> 🎨 **Formatting & Linting:**
-> ✅ Prettier applied.
-> ✅ ESLint passed.
->
-> ✅ **IMPLEMENTATION COMPLETE**
-> All quality gates passed. Would you like me to prepare a **git commit**?

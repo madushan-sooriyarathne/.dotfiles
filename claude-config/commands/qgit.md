@@ -2,56 +2,6 @@
 
 Add, commit, and push changes using Conventional Commits format with quality checks
 
-## Usage
-
-```
-/qgit
-```
-
-## Examples
-
-```bash
-# In a clean session (after /clear) - commits all changed files
-/qgit
-
-# In an ongoing session - commits only session-specific changes
-/qgit
-
-# Expected output:
-# 🔍 Analyzing changes...
-# 📁 Session Context: Clean (checking entire codebase)
-# 📁 Files to commit: 5 files changed
-#
-# 🧪 Running quality checks...
-# ✓ Type check: pnpm run check-types (passed)
-# ✓ Lint: pnpm run lint (passed)
-# ✓ Tests: pnpm run test (passed)
-# ✓ Build: pnpm run build (passed)
-#
-# 📝 Generated commit message:
-# feat(auth): implement user authentication system
-#
-# Add login/logout functionality with JWT tokens
-# Include password reset flow and session management
-# Update user dashboard to show authentication state
-#
-# ✅ Committing and pushing...
-# [main 1a2b3c4] feat(auth): implement user authentication system
-# Pushed to origin/main
-
-# Expected output with errors:
-# 🧪 Running quality checks...
-# ✓ Type check: pnpm run check-types (passed)
-# ❌ Lint: pnpm run lint (2 warnings found)
-#   → Unused variable 'temp' in auth.js:42
-#   → Missing semicolon in utils.js:15
-#
-# 🤔 Quality checks found issues. What would you like to do?
-# 1. Fix issues and re-run checks
-# 2. Commit and push anyway
-# 3. Cancel commit
-```
-
 ## Description
 
 This command automates the complete git workflow by adding changes to staging, creating a properly formatted commit message using Conventional Commits specification, running quality checks, and pushing to remote. It intelligently determines scope based on session context - checking the entire codebase after a clean session or only session-specific changes during ongoing work.

@@ -27,6 +27,8 @@ You are to act as a **Quality Gatekeeper**. This command must be executed before
   - **Tech Stack Preferences:** (Preferred libraries, frameworks, or versions).
   - **Patterns:** (Architectural preferences like Clean Architecture, DRY, etc.).
   - **Workflow:** (Git commit formatting, testing requirements).
+  - Load the `/caveman` skill to enable ultra-compressed communication mode for the rest of the session
+  - Invoke the Skill tool with `skill: "caveman"` to activate caveman mode output for all remaining session responses
 
 ### 3. Confirmation Output
 
@@ -35,24 +37,3 @@ Once parsed, provide a concise confirmation using the following format:
 - **Status:** `✓ Session Initialized`
 - **Summary of Understanding:** [A 3-5 point bulleted list of the most critical constraints found].
 - **Commitment:** "I have committed these standards to session memory. All subsequent code will strictly adhere to these guidelines."
-
----
-
-## Usage Example
-
-**User Input:**
-`/qnew`
-
-**Agent Response:**
-
-> ✓ **Found AGENTS.md in project root**
-> ✓ **Parsed standards successfully**
->
-> **Key Practices Identified:**
->
-> - **Language:** TypeScript (Strict mode)
-> - **Style:** Functional components with Tailwind CSS
-> - **Testing:** Jest for unit tests, 80% coverage required
-> - **Commits:** Conventional Commits standard
->
-> Ready to begin coding. What is our first task?

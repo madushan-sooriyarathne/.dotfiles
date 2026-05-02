@@ -20,6 +20,16 @@
         "lastUpdated": "2026-04-23T18:05:47.708Z",
         "gitCommitSha": "b8ad3cc6c1e40b2d2a944f900a4ae0904a54dd7f"
       }
+    ],
+    "caveman@caveman": [
+      {
+        "scope": "user",
+        "installPath": "/Users/madushan/.claude/plugins/cache/caveman/caveman/ef6050c5e184",
+        "version": "ef6050c5e184",
+        "installedAt": "2026-05-02T15:04:25.428Z",
+        "lastUpdated": "2026-05-02T15:04:25.428Z",
+        "gitCommitSha": "ef6050c5e1848b6880ff47c32ade1a608a64f85e"
+      }
     ]
   }
 }
