@@ -1,5 +1,8 @@
 {
   "permissions": {
+    "allow": [
+      "mcp__pencil"
+    ],
     "deny": [
       "Read(.git/**, .turbo/**, node_modules/**, **/.sanity/**, **/.turbo/**, **/node_modules/**, **/coverage/**, **/dist/**)"
     ]

@@ -2,11 +2,18 @@
   "mcpServers": {
     "filesystem": {
       "command": "bunx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "~/Developer"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "~/Developer"
+      ]
     },
     "sequential-thinking": {
       "command": "bunx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
     },
     "Ref": {
       "httpUrl": "https://api.ref.tools/mcp?apiKey=<API_KEY>"
@@ -16,7 +23,10 @@
     },
     "playwright": {
       "command": "bunx",
-      "args": ["-y", "@playwright/mcp@latest"]
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
     },
     "figma": {
       "command": "bunx",
@@ -29,7 +39,18 @@
     },
     "browser-use": {
       "command": "bunx",
-      "args": ["-y", "@agent-infra/mcp-server-browser@latest"]
+      "args": [
+        "-y",
+        "@agent-infra/mcp-server-browser@latest"
+      ]
+    },
+    "pencil": {
+      "command": "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
+      "args": [
+        "--app",
+        "desktop"
+      ],
+      "env": {}
     }
   },
   "security": {
