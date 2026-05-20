@@ -1,0 +1,1 @@
+{"name":"deploy_to_vercel","description":"Deploy the current project to Vercel","parameters":{"$schema":"http://json-schema.org/draft-07/schema#","properties":{},"type":"object"}}

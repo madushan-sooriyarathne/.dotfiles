@@ -47,6 +47,7 @@ gemini-config/antigravity/user_settings.pb
 gemini-config/settings.json
 gemini-config/config/mcp_config.json
 gemini-config/antigravity-cli/brain/
+gemini-config/antigravity-cli/conversations/
 gemini-config/antigravity-cli/implicit/
 gemini-config/antigravity-cli/log/
 gemini-config/antigravity-cli/cli.log
