@@ -25,7 +25,6 @@ gemini-config/tmp
 gemini-config/google_accounts.json
 gemini-config/google_accounts.json
 gemini-config/oauth_creds.json
-gemini-config/settings.json.orig
 gemini-config/user_id
 gemini-config/installation_id
 
@@ -43,5 +42,18 @@ gemini-config/antigravity/mcp_config.json
 gemini-config/antigravity/onboarding.json
 gemini-config/antigravity/onboarding.json.lock
 gemini-config/antigravity/user_settings.pb
+
+
+gemini-config/settings.json
+gemini-config/config/mcp_config.json
+gemini-config/antigravity-cli/brain/
+gemini-config/antigravity-cli/implicit/
+gemini-config/antigravity-cli/log/
+gemini-config/antigravity-cli/cli.log
+gemini-config/antigravity-cli/installation_id
+gemini-config/antigravity-cli/last_check.timestamp
+gemini-config/antigravity-cli/cache/
+
+
 
 wrap-config/typescript-language-server

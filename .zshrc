@@ -105,3 +105,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # opencode
 export PATH=/Users/madushan/.opencode/bin:$PATH
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/madushan/.local/bin:$PATH"
