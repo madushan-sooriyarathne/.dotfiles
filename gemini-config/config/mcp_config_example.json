@@ -1,0 +1,63 @@
+{
+	"mcpServers": {
+		"filesystem": {
+			"command": "bunx",
+			"args": ["-y", "@modelcontextprotocol/server-filesystem", "~/Developer"]
+		},
+		"sequential-thinking": {
+			"command": "npx",
+			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+			"env": {}
+		},
+		"Ref": {
+			"httpUrl": "https://api.ref.tools/mcp?apiKey=<REF_API_KEY>"
+		},
+		"semgrep": {
+			"httpUrl": "https://mcp.semgrep.ai/mcp"
+		},
+		"figma": {
+			"command": "bunx",
+			"args": [
+				"-y",
+				"figma-developer-mcp",
+				"--figma-api-key=<FIGMA_API_KEY>",
+				"--stdio"
+			]
+		},
+		"browser-use": {
+			"command": "bunx",
+			"args": ["-y", "@agent-infra/mcp-server-browser@latest"]
+		},
+		"@21st-dev/magic": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@21st-dev/magic@latest",
+				"API_KEY=\"<21ST_DEV_MAGIC_API_KEY>\""
+			],
+			"disabled": true
+		},
+		"playwright": {
+			"command": "npx",
+			"args": ["@playwright/mcp@latest"],
+			"disabled": false
+		},
+		"next-devtools": {
+			"command": "npx",
+			"args": ["-y", "next-devtools-mcp@latest"]
+		},
+		"better-auth": {
+			"serverUrl": "https://mcp.inkeep.com/better-auth/mcp",
+			"disabled": true
+		},
+		"paper": {
+			"serverUrl": "http://127.0.0.1:29979/mcp",
+			"disabled": false
+		},
+		"pencil": {
+			"command": "/Users/madushan/.pencil/mcp/antigravity/out/mcp-server-darwin-arm64",
+			"args": ["--app", "antigravity", "--agent", "antigravityIDE"],
+			"env": {}
+		}
+	}
+}

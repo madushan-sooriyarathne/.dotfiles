@@ -1,0 +1,15 @@
+{
+  "id": "10feea22-49d4-443f-bc78-8313efaccc34",
+  "name": "Pharma Route",
+  "projectResources": {
+    "resources": [
+      {
+        "gitFolder": {
+          "folderUri": "file:///Users/madushan/Developer/phrama-route",
+          "defaultBranch": "main",
+          "allowWrite": true
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "allowNonWorkspaceAccess": true,
+  "colorScheme": "dark",
+  "enableTelemetry": false,
+  "model": "Gemini 3.5 Flash (High)",
+  "permissions": {
+    "allow": [
+      "command(pnpm check)",
+      "command(pnpm format)"
+    ]
+  },
+  "trustedWorkspaces": [
+    "/Users/madushan/Developer/phrama-route"
+  ]
+}

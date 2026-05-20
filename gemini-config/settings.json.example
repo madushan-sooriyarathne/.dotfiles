@@ -1,0 +1,54 @@
+{
+	"mcpServers": {
+		"filesystem": {
+			"command": "bunx",
+			"args": ["-y", "@modelcontextprotocol/server-filesystem", "~/Developer"]
+		},
+		"sequential-thinking": {
+			"command": "bunx",
+			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+		},
+		"Ref": {
+			"httpUrl": "https://api.ref.tools/mcp?apiKey=<REF_API_KEY>"
+		},
+		"semgrep": {
+			"httpUrl": "https://mcp.semgrep.ai/mcp"
+		},
+		"playwright": {
+			"command": "bunx",
+			"args": ["-y", "@playwright/mcp@latest"]
+		},
+		"figma": {
+			"command": "bunx",
+			"args": [
+				"-y",
+				"figma-developer-mcp",
+				"--figma-api-key=<FIGMA_API_KEY>",
+				"--stdio"
+			]
+		},
+		"browser-use": {
+			"command": "bunx",
+			"args": ["-y", "@agent-infra/mcp-server-browser@latest"]
+		},
+		"pencil": {
+			"command": "/Users/madushan/.pencil/mcp/antigravity/out/mcp-server-darwin-arm64",
+			"args": ["--app", "antigravity", "--agent", "geminiCLI"],
+			"env": {}
+		}
+	},
+	"security": {
+		"auth": {
+			"selectedType": "oauth-personal"
+		}
+	},
+	"ui": {
+		"hideBanner": false,
+		"showMemoryUsage": false,
+		"theme": "Atom One"
+	},
+	"general": {
+		"preferredEditor": "vim",
+		"vimMode": false
+	}
+}
