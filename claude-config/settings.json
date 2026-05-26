@@ -61,20 +61,20 @@
   },
   "enabledPlugins": {
     "example-skills@anthropic-agent-skills": true,
-    "warp@claude-code-warp": true,
-    "caveman@caveman": true
+    "caveman@caveman": true,
+    "warp@claude-code-warp": true
   },
   "extraKnownMarketplaces": {
-    "claude-code-warp": {
-      "source": {
-        "source": "github",
-        "repo": "warpdotdev/claude-code-warp"
-      }
-    },
     "caveman": {
       "source": {
         "source": "github",
         "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "claude-code-warp": {
+      "source": {
+        "source": "github",
+        "repo": "warpdotdev/claude-code-warp"
       }
     }
   },

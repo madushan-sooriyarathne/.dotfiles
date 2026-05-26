@@ -2,16 +2,32 @@
   "allowNonWorkspaceAccess": true,
   "colorScheme": "dark",
   "enableTelemetry": false,
-  "model": "Gemini 3.5 Flash (High)",
+  "model": "Claude Sonnet 4.6 (Thinking)",
   "permissions": {
     "allow": [
       "command(pnpm check)",
       "command(pnpm format)",
       "command(npx)",
-      "command(pnpm test)"
+      "command(pnpm test)",
+      "command(pnpm build)",
+      "command(dotenv)",
+      "command(pnpm dotenv)",
+      "command(ls)",
+      "command(pnpm run)",
+      "command(tail)",
+      "command(grep)",
+      "command(head)",
+      "command(cat)",
+      "command(find)",
+      "command(pnpm biome)",
+      "command(pnpm --filter @hq-colombo/web exec tsc --noEmit)",
+      "command(pnpm --filter web exec tsc --noEmit)",
+      "command(pnpm --filter web run lint)",
+      "command(cd)"
     ]
   },
   "trustedWorkspaces": [
-    "/Users/madushan/Developer/phrama-route"
+    "/Users/madushan/Developer/phrama-route",
+    "/Users/madushan/Developer/hq-colombo"
   ]
 }

@@ -5,7 +5,7 @@
       "repo": "anthropics/skills"
     },
     "installLocation": "/Users/madushan/.claude/plugins/marketplaces/anthropic-agent-skills",
-    "lastUpdated": "2026-05-20T09:02:46.621Z"
+    "lastUpdated": "2026-05-25T19:45:28.079Z"
   },
   "claude-plugins-official": {
     "source": {
@@ -15,14 +15,6 @@
     "installLocation": "/Users/madushan/.claude/plugins/marketplaces/claude-plugins-official",
     "lastUpdated": "2026-05-15T21:37:44.216Z"
   },
-  "claude-code-warp": {
-    "source": {
-      "source": "github",
-      "repo": "warpdotdev/claude-code-warp"
-    },
-    "installLocation": "/Users/madushan/.claude/plugins/marketplaces/claude-code-warp",
-    "lastUpdated": "2026-04-23T18:05:13.093Z"
-  },
   "caveman": {
     "source": {
       "source": "github",
@@ -30,5 +22,13 @@
     },
     "installLocation": "/Users/madushan/.claude/plugins/marketplaces/caveman",
     "lastUpdated": "2026-05-02T15:04:25.164Z"
+  },
+  "claude-code-warp": {
+    "source": {
+      "source": "github",
+      "repo": "warpdotdev/claude-code-warp"
+    },
+    "installLocation": "/Users/madushan/.claude/plugins/marketplaces/claude-code-warp",
+    "lastUpdated": "2026-05-25T17:26:21.450Z"
   }
 }
