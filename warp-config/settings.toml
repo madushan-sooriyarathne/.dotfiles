@@ -113,6 +113,7 @@ mode = "dismissed"
 play_notification_sound = true
 
 [terminal]
+osc52_clipboard_access = "write_only"
 
 [terminal.input]
 input_box_type_setting = "universal"

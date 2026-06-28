@@ -63,7 +63,9 @@
   "enabledPlugins": {
     "example-skills@anthropic-agent-skills": true,
     "caveman@caveman": true,
-    "warp@claude-code-warp": true
+    "warp@claude-code-warp": true,
+    "setup-claude@claude-code-starter": true,
+    "ponytail@ponytail": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
@@ -77,8 +79,21 @@
         "source": "github",
         "repo": "warpdotdev/claude-code-warp"
       }
+    },
+    "claude-code-starter": {
+      "source": {
+        "source": "github",
+        "repo": "madushan-sooriyarathne/claude-code-starter"
+      }
+    },
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
     }
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "xhigh"
+  "effortLevel": "xhigh",
+  "tui": "fullscreen"
 }

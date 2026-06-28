@@ -17,6 +17,14 @@ claude-config/file-history/
 claude-config/history.jsonl
 claude-config/plugins/
 claude-config/sessions/
+claude-config/chrome/
+claude-config/daemon/
+claude-config/jobs/
+claude-config/plans/
+claude-config/.last-cleanup
+claude-config/.last-update-result.json
+claude-config/.last-update-result.json
+claude-config/daemon.log
 
 **/.DS_Store
 **/.claude

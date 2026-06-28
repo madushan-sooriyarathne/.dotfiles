@@ -7,7 +7,7 @@
         "installPath": "/Users/madushan/.claude/plugins/cache/anthropic-agent-skills/example-skills/unknown",
         "version": "unknown",
         "installedAt": "2025-12-03T07:24:51.025Z",
-        "lastUpdated": "2026-06-17T22:48:26.119Z",
+        "lastUpdated": "2026-06-28T12:57:15.493Z",
         "gitCommitSha": "0f77e501e6506235956d953cd2d7a2a4aa9ba133"
       }
     ],
@@ -29,6 +29,26 @@
         "installedAt": "2026-05-25T17:26:21.730Z",
         "lastUpdated": "2026-05-25T17:26:21.730Z",
         "gitCommitSha": "bb6c1cf2f5cd7eb609678a2b175e7f4504ca61c2"
+      }
+    ],
+    "setup-claude@claude-code-starter": [
+      {
+        "scope": "user",
+        "installPath": "/Users/madushan/.claude/plugins/cache/claude-code-starter/setup-claude/2.3.0",
+        "version": "2.3.0",
+        "installedAt": "2026-06-27T11:28:05.536Z",
+        "lastUpdated": "2026-06-27T11:28:05.536Z",
+        "gitCommitSha": "891f4494b8a013f76877bc3380966facb2dcc5bf"
+      }
+    ],
+    "ponytail@ponytail": [
+      {
+        "scope": "user",
+        "installPath": "/Users/madushan/.claude/plugins/cache/ponytail/ponytail/4.8.3",
+        "version": "4.8.3",
+        "installedAt": "2026-06-27T19:28:21.228Z",
+        "lastUpdated": "2026-06-27T19:28:21.228Z",
+        "gitCommitSha": "c4d1925ae9b76a1b641877328209ad25cfeb5ef2"
       }
     ]
   }
